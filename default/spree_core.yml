@@ -32,24 +32,7 @@ en:
         phone: Phone
         state: "State"
         zipcode: "Zip Code"
-      checkout:
-        bill_address:
-          address1: "Billing address street"
-          city: "Billing address city"
-          firstname: "Billing address first name"
-          lastname: "Billing address last name"
-          phone: "Billing address phone"
-          state: "Billing address state"
-          zipcode: "Billing address zipcode"
-        ship_address:
-          address1: "Shipping address street"
-          city: "Shipping address city"
-          firstname: "Shipping address first name"
-          lastname: "Shipping address last name"
-          phone: "Shipping address phone"
-          state: "Shipping address state"
-          zipcode: "Shipping address zipcode"
-      country:
+      country: 
         iso: ISO
         iso3: ISO3
         iso_name: "ISO Name"
@@ -67,6 +50,22 @@ en:
         price: Price
         quantity: Quantity
       order:
+        bill_address:
+          address1: "Billing address street"
+          city: "Billing address city"
+          firstname: "Billing address first name"
+          lastname: "Billing address last name"
+          phone: "Billing address phone"
+          state: "Billing address state"
+          zipcode: "Billing address zipcode"
+        ship_address:
+          address1: "Shipping address street"
+          city: "Shipping address city"
+          firstname: "Shipping address first name"
+          lastname: "Shipping address last name"
+          phone: "Shipping address phone"
+          state: "Shipping address state"
+          zipcode: "Shipping address zipcode"
         checkout_complete: "Checkout Complete"
         completed_at: "Completed At"
         coupon_code: "Coupon Code"
@@ -76,6 +75,11 @@ en:
         special_instructions: "Special Instructions"
         state: State
         total: Total
+      option_type:
+        name: Name
+        presentation: Presentation
+      payment_method:
+        name: Name
       product:
         available_on: "Available On"
         cost_price: "Cost Price"
@@ -119,6 +123,8 @@ en:
         name: Name
       user:
         email: Email
+        password: "Password"
+        password_confirmation: "Password Confirmation"
       variant:
         cost_price: "Cost Price"
         depth: Depth
@@ -228,11 +234,18 @@ en:
   adjustment_total: Adjustment Total
   adjustments: Adjustments
   administration: Administration
+  admin:
+    mail_methods:
+      send_testmail: 'Send Testmail'
+      testmail:
+        delivery_error: 'Testmail delivery error'
+        delivery_success: 'Testmail sent successfully'
+        error: 'Testmail error: %{e}'
   all: "All"
   all_departments: All departments
   allow_backorders: "Allow Backorders"
-  allow_ssl_to_be_used_when_in_developement_and_test_modes: Allow SSL to be used when in development and test modes
-  allow_ssl_to_be_used_when_in_production_mode: Allow SSL to be used in production mode
+  allow_ssl_in_development_and_test: Allow SSL to be used when in development and test modes
+  allow_ssl_in_production: Allow SSL to be used in production mode
   allowed_ssl_in_production_mode: "SSL will %{not} be used in production"
   already_registered: Already Registered?
   alt_text: Alternative Text
@@ -334,6 +347,9 @@ en:
   date_range: "Date Range"
   debit: Debit
   default: Default
+  default_meta_description: Default Meta Description
+  default_meta_keywords: Default Meta Keywords
+  default_seo_title: Default Seo Title
   delete: Delete
   delivery: Delivery
   depth: Depth
@@ -371,7 +387,7 @@ en:
   enable_login_via_openid: "Use OpenID instead"
   enable_mail_delivery: Enable Mail Delivery
   enter_exactly_as_shown_on_card: Please enter exactly as shown on the card
-  enter_atleast_five_letters: Enter atleast five letters of customer name
+  enter_at_least_five_letters: Enter at least five letters of customer name
   enter_password_to_confirm: "(we need your current password to confirm your changes)"
   environment: "Environment"
   error: error
@@ -383,6 +399,17 @@ en:
     one: "1 error prohibited this record from being saved"
     other: "%{count} errors prohibited this record from being saved"
   event: Event
+  events:
+    spree:
+      cart:
+        add: 'Add to cart'
+      checkout:
+        coupon_code_added: "Coupon code added"
+      order:
+        contents_changed: "Order contents changed"
+      user:
+        signup: 'User signup'
+      page_view: "Static page viewed"
   existing_customer: "Existing Customer"
   expiration: "Expiration"
   expiration_month: "Expiration Month"
@@ -438,6 +465,7 @@ en:
   included_in_other_shipment: Included in another Shipment
   included_in_this_shipment: Included in this Shipment
   instructions_to_reset_password: "Fill out the form below and instructions to reset your password will be emailed to you:"
+  insufficient_stock: "Insufficient stock available, only %{on_hand} remaining"
   integration_settings_warning: "If you are changing the billing integration, you must save first before you can edit the integration settings"
   intercept_email_address: Intercept Email Address
   intercept_email_instructions: "Override email recipient and replace with this address."
@@ -499,12 +527,13 @@ en:
   my_account: "My Account"
   my_orders: "My Orders"
   name: Name
-  name_or_sku: "Name or SKU"
+  name_or_sku: "Name or SKU (enter at least first 4 characters of product name)"
   new: New
   new_adjustment: "New Adjustment"
   new_billing_integration: New Billing Integration
   new_category: "New category"
   new_customer: "New Customer"
+  new_group: New Group
   new_image: "New Image"
   new_mail_method: New Mail Method
   new_option_type: "New Option Type"
@@ -600,7 +629,7 @@ en:
   out_of_stock_products: "Out of Stock Products"
   over_paid: "Over Paid"
   overview: Overview
-  overview_welcome: "Welcome to your store overview, currently we do not have enough data to display the Overiew Dashboard.<br/><br/> The dashboard will display automatically once the system has sufficent orders to allow generation of the statistics."
+  overview_welcome: "Welcome to your store overview, currently we do not have enough data to display the Overview Dashboard.<br /><br /> The dashboard will display automatically once the system has sufficent orders to allow generation of the statistics."
   page_only_viewable_when_logged_in: You attempted to visit a page which can only be viewed when you are logged in
   page_only_viewable_when_logged_out: You attempted to visit a page which can only be viewed when you are logged out
   paid: Paid
@@ -903,10 +932,13 @@ en:
     date: Date
     time: Time
   spree_gateway_error_flash_for_checkout: "There was a problem with your payment information. Please check your information and try again."
+  spree_inventory_error_flash_for_insufficient_quantity: "An item in your cart has become unavailable."
   ssl_will_be_used_in_development_and_test_modes: "SSL will be used in development and test mode if necessary."
   ssl_will_be_used_in_production_mode: "SSL will be used in production mode"
   ssl_will_not_be_used_in_development_and_test_modes: "SSL will not be used in development and test mode if necessary."
   ssl_will_not_be_used_in_production_mode: "SSL will not be used in production mode"
+  spree_alert_checking: "Check for Spree security and release alerts"
+  spree_alert_not_checking: "Not checking for Spree security and release alerts"
   start: Start
   start_date: Valid from
   state: State
@@ -936,6 +968,7 @@ en:
   tax_type: "Tax Type"
   taxon: Taxon
   taxon_edit: Edit Taxon
+  taxonomy: Taxonomy
   taxonomies: Taxonomies
   taxonomies_setting_description: "Create and manage taxonomies."
   taxonomy_edit: "Edit taxonomy"
@@ -943,6 +976,11 @@ en:
   taxonomy_tree_instruction: "* Right click a child in the tree to access the menu for adding, deleting or sorting a child."
   taxons: Taxons
   test: "Test"
+  test_mailer:
+    test_email:
+      greeting: 'Congratulations!'
+      message: 'If you have received this email, then your email settings are correct.'
+      subject: 'Testmail'
   test_mode: Test Mode
   thank_you_for_your_order: "Thank you for your business.  Please print out a copy of this confirmation page for your records."
   there_were_problems_with_the_following_fields: "There were problems with the following fields"
@@ -990,6 +1028,7 @@ en:
     must_be_int: "must be an integer"
     must_be_non_negative: "must be a non-negative value"
   value: Value
+  variant: Variant
   variants: Variants
   vat: "VAT"
   version: Version
