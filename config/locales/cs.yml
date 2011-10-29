@@ -1,5 +1,5 @@
 ---
-cs-CZ: 
+cs:
   'no': "Ne"
   'yes': "Ano"
   5_biggest_spenders: "5 Nejvíce utrácejících"
@@ -1137,3 +1137,4 @@ cs-CZ:
   zone_based: "Založeno na zóně"
   zone_setting_description: "Soubor zemí, států a jiných zón, které budou použity v různých výpočtech."
   zones: "Zóny"
+
