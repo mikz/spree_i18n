@@ -24,6 +24,15 @@ ja:
     new: "新規"
     update: "更新"
   active: "有効"
+  activemodel: 
+    attributes: 
+      promotion: 
+        code: Code
+        description: Description
+        expires_at: Expires at
+        name: Name
+        starts_at: Starts at
+        usage_limit: Usage limit
   activerecord: 
     attributes: 
       address: 
@@ -38,23 +47,6 @@ ja:
         phone: "電話番号"
         state: "県・州"
         zipcode: "郵便番号"
-      checkout: 
-        bill_address: 
-          address1: "Billing address street"
-          city: "Billing address city"
-          firstname: "Billing address first name"
-          lastname: "Billing address last name"
-          phone: "Billing address phone"
-          state: "Billing address state"
-          zipcode: "Billing address zipcode"
-        ship_address: 
-          address1: "Shipping address street"
-          city: "Shipping address city"
-          firstname: "Shipping address first name"
-          lastname: "Shipping address last name"
-          phone: "配送先の電話番号"
-          state: "配送先の都道府県(州)"
-          zipcode: "配送先の郵便番号"
       country: 
         iso: "ISO"
         iso3: "ISO3"
@@ -72,16 +64,37 @@ ja:
       line_item: 
         price: "価格"
         quantity: "個数"
+      option_type: 
+        name: Name
+        presentation: Presentation
       order: 
+        bill_address: 
+          address1: "Billing address street"
+          city: "Billing address city"
+          firstname: "Billing address first name"
+          lastname: "Billing address last name"
+          phone: "Billing address phone"
+          state: "Billing address state"
+          zipcode: "Billing address zipcode"
         checkout_complete: "注文の受け付けを完了しました"
         completed_at: "注文受付時刻"
         coupon_code: "クーポン・コード"
         ip_address: "IPアドレス"
         item_total: "合計"
         number: "数"
+        ship_address: 
+          address1: "Shipping address street"
+          city: "Shipping address city"
+          firstname: "Shipping address first name"
+          lastname: "Shipping address last name"
+          phone: "Shipping address phone"
+          state: "Shipping address state"
+          zipcode: "Shipping address zipcode"
         special_instructions: "詳細・説明・コメント"
         state: "都道府県（州）"
         total: "合計"
+      payment_method: 
+        name: Name
       product: 
         available_on: "販売開始日"
         cost_price: "原価"
@@ -100,13 +113,6 @@ ja:
       product_scope: 
         arguments: "Arguments"
         description: "説明"
-      promotion: 
-        code: "コード"
-        description: "説明"
-        expires_at: "有効期限"
-        name: "タイトル"
-        starts_at: "開始日"
-        usage_limit: "使用可能回数"
       property: 
         name: "名称"
         presentation: "表示"
@@ -132,6 +138,8 @@ ja:
         name: "名称"
       user: 
         email: "Eメール"
+        password: "Password"
+        password_confirmation: "Password Confirmation"
       variant: 
         cost_price: "Cost Price"
         depth: "奥行き"
@@ -223,6 +231,7 @@ ja:
         one: "ゾーン"
         other: "ゾーン"
   add: "追加"
+  add_action_of_type: Add action of type
   add_category: "カテゴリーの追加"
   add_country: "国の追加"
   add_option_type: "Add Option Type"
@@ -241,12 +250,20 @@ ja:
   adjustment: "調整"
   adjustment_total: Adjustment Total
   adjustments: Adjustments
+  admin: 
+    mail_methods: 
+      send_testmail: 'Send Testmail'
+      testmail: 
+        delivery_error: 'Testmail delivery error'
+        delivery_success: 'Testmail sent successfully'
+        error: 'Testmail error: %{e}'
   administration: "管理"
+  advertise: Advertise
   all: "全て"
   all_departments: "全てのカテゴリ"
   allow_backorders: "取り寄せ注文を許可する"
-  allow_ssl_to_be_used_when_in_developement_and_test_modes: "開発モードとテストモードでもSSLを利用する"
-  allow_ssl_to_be_used_when_in_production_mode: "プロダクションモードでSSLを利用する"
+  allow_ssl_in_development_and_test: Allow SSL to be used when in development and test modes
+  allow_ssl_in_production: Allow SSL to be used in production mode
   allowed_ssl_in_production_mode: "プロダクションモードでSSLは使用%{wont}"
   already_registered: "もう登録済み?"
   alt_text: Alternative Text
@@ -363,6 +380,9 @@ ja:
   date_range: "日範囲"
   debit: Debit
   default: "初期設定"
+  default_meta_description: Default Meta Description
+  default_meta_keywords: Default Meta Keywords
+  default_seo_title: Default Seo Title
   delete: "削除"
   delivery: Delivery
   depth: "奥行き"
@@ -401,7 +421,7 @@ ja:
   enable_login_via_login_password: "Use standard email/password"
   enable_login_via_openid: "Use OpenID instead"
   enable_mail_delivery: Enable Mail Delivery
-  enter_atleast_five_letters: Enter atleast five letters of customer name
+  enter_at_least_five_letters: Enter at least five letters of customer name
   enter_exactly_as_shown_on_card: Please enter exactly as shown on the card
   enter_password_to_confirm: "(we need your current password to confirm your changes)"
   environment: "環境"
@@ -414,6 +434,17 @@ ja:
     one: "1 error prohibited this record from being saved"
     other: "%{count} errors prohibited this record from being saved"
   event: "イベント"
+  events: 
+    spree: 
+      cart: 
+        add: 'Add to cart'
+      checkout: 
+        coupon_code_added: "Coupon code added"
+      order: 
+        contents_changed: "Order contents changed"
+      page_view: "Static page viewed"
+      user: 
+        signup: 'User signup'
   existing_customer: "Existing Customer"
   expiration: "有効期限"
   expiration_month: "有効期限(月)"
@@ -470,6 +501,7 @@ ja:
   included_in_other_shipment: Included in another Shipment
   included_in_this_shipment: Included in this Shipment
   instructions_to_reset_password: "Fill out the form below and instructions to reset your password will be emailed to you:"
+  insufficient_stock: "Insufficient stock available, only %{on_hand} remaining"
   integration_settings_warning: "If you are changing the billing integration, you must save first before you can edit the integration settings"
   intercept_email_address: Intercept Email Address
   intercept_email_instructions: "Override email recipient and replace with this address."
@@ -488,6 +520,8 @@ ja:
       gt: "より大きい"
       gte: "以上"
   items: "アイテム"
+  landing_page_rule: 
+    path: Path
   last_14_days: "過去2週間分"
   last_5_orders: "最後の5件の注文"
   last_7_days: "先週"
@@ -526,7 +560,6 @@ ja:
   mark_shipped: "発送済みとしてマーくする"
   master_price: "定価"
   max_items: Max Items
-  may_be_combined_with_other_promotions: May be combined with other promotions
   meta_description: "メタ情報説明"
   meta_keywords: "メタキーワード"
   metadata: "メタデータ"
@@ -542,6 +575,7 @@ ja:
   new_billing_integration: New Billing Integration
   new_category: 新規カテゴリー
   new_customer: 新規顧客
+  new_group: New Group
   new_image: 新規画像
   new_mail_method: New Mail Method
   new_option_type: 新規オプションタイプ
@@ -616,7 +650,6 @@ ja:
   order_processed_but_following_items_are_out_of_stock: "Your order has been processed, but following items are out of stock:"
   order_processed_successfully: "Your order has been processed successfully"
   order_state: # keys correspond to Checkout state names:
-    # keys correspond to Checkout state names: 
     address: address
     adjustments: adjustments
     awaiting_return: awaiting return
@@ -823,10 +856,23 @@ ja:
   products: "商品"
   products_with_zero_inventory_display: "Products with a zero inventory will %{not} be displayed"
   promotion: Promotion
+  promotion_action: Promotion Action
+  promotion_action_types: 
+    create_adjustment: 
+      description: Creates a promotion credit adjustment on the order
+      name: Create adjustment
+    create_line_items: 
+      description: Populates the cart with the specified variants and quantities
+      name: Create line items
+    give_store_credit: 
+      description: Gives the user store credit of the amount specified
+      name: Give store credit
+  promotion_actions: Actions
   promotion_form: 
     match_policies: 
       all: Match any of these rules
       any: Match all of these rules
+  promotion_rule: Promotion Rule
   promotion_rule_types: 
     first_order: 
       description: Must be the customer's first order
@@ -834,12 +880,18 @@ ja:
     item_total: 
       description: Order total meets these criteria
       name: Item total
+    landing_page: 
+      description: Customer must have visited the specified page
+      name: Landing Page
     product: 
       description: Order includes specified product(s)
       name: Product(s)
     user: 
       description: Available only to the specified users
       name: "ユーザ名"
+    user_logged_in: 
+      description: Available only to logged in users
+      name: User Logged In
   promotions: "スペシャル"
   promotions_description: "スペシャルオファーやクーポンなどの商売促進を管理する"
   properties: "属性"
@@ -970,7 +1022,10 @@ ja:
   spree: 
     date: "日付"
     time: "時間"
+  spree_alert_checking: "Check for Spree security and release alerts"
+  spree_alert_not_checking: "Not checking for Spree security and release alerts"
   spree_gateway_error_flash_for_checkout: "There was a problem with your payment information. Please check your information and try again."
+  spree_inventory_error_flash_for_insufficient_quantity: "An item in your cart has become unavailable."
   ssl_will_be_used_in_development_and_test_modes: "必要に応じて開発モードとテストモードにSSLが使用されます"
   ssl_will_be_used_in_production_mode: "プロダクションモードではSSLが使用されます"
   ssl_will_not_be_used_in_development_and_test_modes: "必要性がない限り開発モードとテストモードにSSLが使用されません"
@@ -1006,11 +1061,17 @@ ja:
   taxon_edit: "分類単位を編集"
   taxonomies: "分類単位"
   taxonomies_setting_description: "Create and manage taxonomies"
+  taxonomy: Taxonomy
   taxonomy_edit: "Edit taxonomy"
   taxonomy_tree_error: "The requested change has not been accepted and the tree has been returned to its previous state, please try again."
   taxonomy_tree_instruction: "* Right click a child in the tree to access the menu for adding, deleting or sorting a child."
   taxons: "分類"
   test: "テスト"
+  test_mailer: 
+    test_email: 
+      greeting: 'Congratulations!'
+      message: 'If you have received this email, then your email settings are correct.'
+      subject: 'Testmail'
   test_mode: "テストモード"
   thank_you_for_your_order: "Thank you for your business.  Please print out a copy of this confirmation page for your records."
   there_were_problems_with_the_following_fields: "There were problems with the following fields"
@@ -1060,6 +1121,7 @@ ja:
     must_be_int: "must be an integer"
     must_be_non_negative: "must be a non-negative value"
   value: 値
+  variant: Variant
   variants: 形式
   vat: "VAT"
   version: バージョン
@@ -1072,7 +1134,6 @@ ja:
   what_is_this: "What's This?"
   whats_this: "What's this"
   width: "横幅"
-  wont: "されない"
   year: "年"
   you_have_been_logged_out: "You have been logged out."
   you_have_no_orders_yet: "You have no orders yet."

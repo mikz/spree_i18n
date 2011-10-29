@@ -18,6 +18,15 @@ pt-BR:
     new: Novo
     update: Atualizar
   active: Ativo
+  activemodel: 
+    attributes: 
+      promotion: 
+        code: Code
+        description: Description
+        expires_at: Expires at
+        name: Name
+        starts_at: Starts at
+        usage_limit: Usage limit
   activerecord: 
     attributes: 
       address: 
@@ -32,23 +41,6 @@ pt-BR:
         phone: Telefone
         state: Estado
         zipcode: CEP
-      checkout: 
-        bill_address: 
-          address1: Endereço
-          city: Cidade
-          firstname: Nome
-          lastname: Sobrenome
-          phone: Telefone
-          state: Estado
-          zipcode: CEP
-        ship_address: 
-          address1: Endereço
-          city: Cidade
-          firstname: Nome
-          lastname: Sobrenome
-          phone: Telefone
-          state: Estado
-          zipcode: CEP
       country: 
         iso: ISO
         iso3: ISO3
@@ -66,16 +58,37 @@ pt-BR:
       line_item: 
         price: Preço
         quantity: Quantidade
+      option_type: 
+        name: Name
+        presentation: Presentation
       order: 
+        bill_address: 
+          address1: "Billing address street"
+          city: "Billing address city"
+          firstname: "Billing address first name"
+          lastname: "Billing address last name"
+          phone: "Billing address phone"
+          state: "Billing address state"
+          zipcode: "Billing address zipcode"
         checkout_complete: "Compra finalizada"
         completed_at: "Completo em"
         coupon_code: "Coupon Code"
         ip_address: "Endereço IP"
         item_total: "Total"
         number: Número
+        ship_address: 
+          address1: "Shipping address street"
+          city: "Shipping address city"
+          firstname: "Shipping address first name"
+          lastname: "Shipping address last name"
+          phone: "Shipping address phone"
+          state: "Shipping address state"
+          zipcode: "Shipping address zipcode"
         special_instructions: "Informações especiais"
         state: Estado
         total: Total
+      payment_method: 
+        name: Name
       product: 
         available_on: "Disponível em"
         cost_price: "Preço de custo"
@@ -94,13 +107,6 @@ pt-BR:
       product_scope: 
         arguments: "Argumentos"
         description: "Descrição"
-      promotion: 
-        code: "Code"
-        description: "Descrição"
-        expires_at: "Expira em"
-        name: "Name"
-        starts_at: "Começa em"
-        usage_limit: "Limite de utilização"
       property: 
         name: Nome
         presentation: Apresentação
@@ -126,6 +132,8 @@ pt-BR:
         name: Nome
       user: 
         email: Email
+        password: "Password"
+        password_confirmation: "Password Confirmation"
       variant: 
         cost_price: "Preço de custo"
         depth: Espessura
@@ -217,6 +225,7 @@ pt-BR:
         one: Zona
         other: Zonas
   add: Adicionar
+  add_action_of_type: Add action of type
   add_category: "Adicionar categoria"
   add_country: "Adicionar país"
   add_option_type: "Adicionar opção"
@@ -235,12 +244,20 @@ pt-BR:
   adjustment: Ajuste
   adjustment_total: "Total de ajustes"
   adjustments: Ajustes
+  admin: 
+    mail_methods: 
+      send_testmail: 'Send Testmail'
+      testmail: 
+        delivery_error: 'Testmail delivery error'
+        delivery_success: 'Testmail sent successfully'
+        error: 'Testmail error: %{e}'
   administration: Administração
+  advertise: Advertise
   all: "Todos"
   all_departments: "Todos departamentos"
   allow_backorders: "Permitir adiamentos"
-  allow_ssl_to_be_used_when_in_developement_and_test_modes: "Ativar SSL em mode de desenvolvimento e teste"
-  allow_ssl_to_be_used_when_in_production_mode: "Ativar SSL em produção"
+  allow_ssl_in_development_and_test: Allow SSL to be used when in development and test modes
+  allow_ssl_in_production: Allow SSL to be used in production mode
   allowed_ssl_in_production_mode: "SSL %{not} será usado em produção"
   already_registered: "Já possuí registro?"
   alt_text: "Texto alternativo"
@@ -357,6 +374,9 @@ pt-BR:
   date_range: "Entre as Datas"
   debit: Débito
   default: Padrão
+  default_meta_description: Default Meta Description
+  default_meta_keywords: Default Meta Keywords
+  default_seo_title: Default Seo Title
   delete: Apagar
   delivery: Delivery
   depth: Espessura
@@ -395,7 +415,7 @@ pt-BR:
   enable_login_via_login_password: "Usar email/senha padrão"
   enable_login_via_openid: "Usar OpenID"
   enable_mail_delivery: "Habilitar envio de email"
-  enter_atleast_five_letters: Enter atleast five letters of customer name
+  enter_at_least_five_letters: Enter at least five letters of customer name
   enter_exactly_as_shown_on_card: "Por favor, informe exatamente como está no cartão"
   enter_password_to_confirm: "(precisamos da sua senha atual para atualizar)"
   environment: "Ambiente"
@@ -408,6 +428,17 @@ pt-BR:
     one: "1 error prohibited this record from being saved"
     other: "%{count} errors prohibited this record from being saved"
   event: Evento
+  events: 
+    spree: 
+      cart: 
+        add: 'Add to cart'
+      checkout: 
+        coupon_code_added: "Coupon code added"
+      order: 
+        contents_changed: "Order contents changed"
+      page_view: "Static page viewed"
+      user: 
+        signup: 'User signup'
   existing_customer: "Cliente Existente"
   expiration: "Expiração"
   expiration_month: "Mês de Expiração"
@@ -464,6 +495,7 @@ pt-BR:
   included_in_other_shipment: "Incluir em outra entrega"
   included_in_this_shipment: "Incluso nesta entrega"
   instructions_to_reset_password: "Preencha o formulário abaixo e enviaremos instruções de como resetar sua senha por email:"
+  insufficient_stock: "Insufficient stock available, only %{on_hand} remaining"
   integration_settings_warning: "Se estás mudando a integração de notas, deves antes salvar para poder editar as configurações"
   intercept_email_address: "Interceptar endereço de email "
   intercept_email_instructions: "Sobreescrever destinatários por este endereço de email."
@@ -482,6 +514,8 @@ pt-BR:
       gt: "maior que"
       gte: "maior ou igual que"
   items: "Artigos"
+  landing_page_rule: 
+    path: Path
   last_14_days: "Últimos 14 Dias"
   last_5_orders: "Últimos 5 Pedidos"
   last_7_days: "Últimos 7 Dias"
@@ -520,7 +554,6 @@ pt-BR:
   mark_shipped: "Marcar como enviado"
   master_price: "Preço Principal"
   max_items: "Artigos máximos"
-  may_be_combined_with_other_promotions: May be combined with other promotions
   meta_description: "Descrição"
   meta_keywords: "Palavras-Chave"
   metadata: "Metadados"
@@ -536,6 +569,7 @@ pt-BR:
   new_billing_integration: "Nova integração de nota"
   new_category: "Nova categoria"
   new_customer: "Novo Cliente"
+  new_group: New Group
   new_image: "Nova Imagem"
   new_mail_method: "Nova forma de correio"
   new_option_type: "Novo Tipo de Opção"
@@ -610,7 +644,6 @@ pt-BR:
   order_processed_but_following_items_are_out_of_stock: "Seu pedido foi processado, mas os seguintes itens estão esgotados:"
   order_processed_successfully: "Seu pedido foi processado com sucesso."
   order_state: # keys correspond to Checkout state names:
-    # keys correspond to Checkout state names: 
     address: endereço
     adjustments: ajustes
     awaiting_return: aguardando retorno
@@ -817,10 +850,23 @@ pt-BR:
   products: Produtos
   products_with_zero_inventory_display: "Produtos sem inventário %{not} serão exibidos"
   promotion: Promotion
+  promotion_action: Promotion Action
+  promotion_action_types: 
+    create_adjustment: 
+      description: Creates a promotion credit adjustment on the order
+      name: Create adjustment
+    create_line_items: 
+      description: Populates the cart with the specified variants and quantities
+      name: Create line items
+    give_store_credit: 
+      description: Gives the user store credit of the amount specified
+      name: Give store credit
+  promotion_actions: Actions
   promotion_form: 
     match_policies: 
       all: Combinar todas regras
       any: Combinar algumas regras
+  promotion_rule: Promotion Rule
   promotion_rule_types: 
     first_order: 
       description: "Deve ser o primeiro pedido do usuário"
@@ -828,12 +874,18 @@ pt-BR:
     item_total: 
       description: "Total do pedio fecha com estes critérios"
       name: "Total do item"
+    landing_page: 
+      description: Customer must have visited the specified page
+      name: Landing Page
     product: 
       description: "Pedido inclui produto(s) específico(s)"
       name: Produto(s)
     user: 
       description: "Disponível apenas para usuários específicos"
       name: Usuários
+    user_logged_in: 
+      description: Available only to logged in users
+      name: User Logged In
   promotions: Promoções
   promotions_description: "Gerenciar ofertas e promoções com cupons"
   properties: Propriedades
@@ -964,7 +1016,10 @@ pt-BR:
   spree: 
     date: Data
     time: Horário
+  spree_alert_checking: "Check for Spree security and release alerts"
+  spree_alert_not_checking: "Not checking for Spree security and release alerts"
   spree_gateway_error_flash_for_checkout: "There was a problem with your payment information. Please check your information and try again."
+  spree_inventory_error_flash_for_insufficient_quantity: "An item in your cart has become unavailable."
   ssl_will_be_used_in_development_and_test_modes: "SSL will be used in development and test mode if necessary."
   ssl_will_be_used_in_production_mode: "SSL will be used in production mode"
   ssl_will_not_be_used_in_development_and_test_modes: "SSL will not be used in development and test mode if necessary."
@@ -1000,11 +1055,17 @@ pt-BR:
   taxon_edit: "Editar taxón"
   taxonomies: Taxonomias
   taxonomies_setting_description: "Criar e gerir taxonomias"
+  taxonomy: Taxonomy
   taxonomy_edit: "Editar taxonomia"
   taxonomy_tree_error: "A modificação não foi aceita e a árvore retornou ao seu estado anterior, por favor tente novamente."
   taxonomy_tree_instruction: "* Clique com o botão direito sobre um nó da árvore para ver o menu."
   taxons: Taxons
   test: "Teste"
+  test_mailer: 
+    test_email: 
+      greeting: 'Congratulations!'
+      message: 'If you have received this email, then your email settings are correct.'
+      subject: 'Testmail'
   test_mode: "Modo de Teste"
   thank_you_for_your_order: "Obrigado por sua compra. Por favor, imprima uma cópia desta página de confirmação para seu controle."
   there_were_problems_with_the_following_fields: "There were problems with the following fields"
@@ -1054,6 +1115,7 @@ pt-BR:
     must_be_int: "deve ser um inteiro"
     must_be_non_negative: "deve ser um valor positivo ou zero"
   value: Valor
+  variant: Variant
   variants: Variantes
   vat: "VAT"
   version: Versão

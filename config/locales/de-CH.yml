@@ -18,6 +18,15 @@ de-CH:
     new: Neu
     update: Aktualisieren
   active: "Aktiv"
+  activemodel: 
+    attributes: 
+      promotion: 
+        code: Code
+        description: Description
+        expires_at: Expires at
+        name: Name
+        starts_at: Starts at
+        usage_limit: Usage limit
   activerecord: 
     attributes: 
       address: 
@@ -32,23 +41,6 @@ de-CH:
         phone: Telefonnummer
         state: "State"
         zipcode: PLZ
-      checkout: 
-        bill_address: 
-          address1: "Billing address street"
-          city: "Billing address city"
-          firstname: "Billing address first name"
-          lastname: "Billing address last name"
-          phone: "Billing address phone"
-          state: "Billing address state"
-          zipcode: "Billing address zipcode"
-        ship_address: 
-          address1: "Shipping address street"
-          city: "Shipping address city"
-          firstname: "Shipping address first name"
-          lastname: "Shipping address last name"
-          phone: "Shipping address phone"
-          state: "Shipping address state"
-          zipcode: "Shipping address zipcode"
       country: 
         iso: ISO
         iso3: ISO3
@@ -66,16 +58,37 @@ de-CH:
       line_item: 
         price: Preis
         quantity: Menge
+      option_type: 
+        name: Name
+        presentation: Presentation
       order: 
+        bill_address: 
+          address1: "Billing address street"
+          city: "Billing address city"
+          firstname: "Billing address first name"
+          lastname: "Billing address last name"
+          phone: "Billing address phone"
+          state: "Billing address state"
+          zipcode: "Billing address zipcode"
         checkout_complete: "Bestellung abgeschlossen"
         completed_at: "Completed At"
         coupon_code: "Coupon Code"
         ip_address: "IP-Adresse"
         item_total: "Artikel gesamt"
         number: Bestellnummer
+        ship_address: 
+          address1: "Shipping address street"
+          city: "Shipping address city"
+          firstname: "Shipping address first name"
+          lastname: "Shipping address last name"
+          phone: "Shipping address phone"
+          state: "Shipping address state"
+          zipcode: "Shipping address zipcode"
         special_instructions: "Spezielle Anmerkungen"
         state: Kanton
         total: Gesamt
+      payment_method: 
+        name: Name
       product: 
         available_on: "Erhältlich ab"
         cost_price: "Einkaufspreis"
@@ -94,13 +107,6 @@ de-CH:
       product_scope: 
         arguments: "Arguments"
         description: "Description"
-      promotion: 
-        code: "Code"
-        description: "Description"
-        expires_at: "Expires at"
-        name: "Name"
-        starts_at: "Starts at"
-        usage_limit: "Usage limit"
       property: 
         name: Name
         presentation: Darstellung
@@ -126,6 +132,8 @@ de-CH:
         name: Name
       user: 
         email: E-Mail
+        password: "Password"
+        password_confirmation: "Password Confirmation"
       variant: 
         cost_price: "Cost Price"
         depth: Tiefe
@@ -217,6 +225,7 @@ de-CH:
         one: Zone
         other: Zonen
   add: "Hinzufügen"
+  add_action_of_type: Add action of type
   add_category: "Kategorie hinzufügen"
   add_country: "Land hinzufügen"
   add_option_type: "Option hinzufügen"
@@ -235,12 +244,20 @@ de-CH:
   adjustment: Anpassung
   adjustment_total: Adjustment Total
   adjustments: Adjustments
+  admin: 
+    mail_methods: 
+      send_testmail: 'Send Testmail'
+      testmail: 
+        delivery_error: 'Testmail delivery error'
+        delivery_success: 'Testmail sent successfully'
+        error: 'Testmail error: %{e}'
   administration: Verwaltung
+  advertise: Advertise
   all: "Alles"
   all_departments: "Alle Bereiche"
   allow_backorders: "Lieferrückstand erlauben"
-  allow_ssl_to_be_used_when_in_developement_and_test_modes: "SSL in den Modi 'development' und 'test' erlauben"
-  allow_ssl_to_be_used_when_in_production_mode: "SSL im Modus 'production' erlauben"
+  allow_ssl_in_development_and_test: Allow SSL to be used when in development and test modes
+  allow_ssl_in_production: Allow SSL to be used in production mode
   allowed_ssl_in_production_mode: "SSL will %{not} be used in production"
   already_registered: "Bereits registriert?"
   alt_text: Alternative Text
@@ -357,6 +374,9 @@ de-CH:
   date_range: "Datum (von/bis)"
   debit: Debit
   default: Default
+  default_meta_description: Default Meta Description
+  default_meta_keywords: Default Meta Keywords
+  default_seo_title: Default Seo Title
   delete: Löschen
   delivery: Delivery
   depth: Tiefe
@@ -395,7 +415,7 @@ de-CH:
   enable_login_via_login_password: "Use standard email/password"
   enable_login_via_openid: "OpenID verwenden"
   enable_mail_delivery: "Mailversand einschalten"
-  enter_atleast_five_letters: Enter atleast five letters of customer name
+  enter_at_least_five_letters: Enter at least five letters of customer name
   enter_exactly_as_shown_on_card: Please enter exactly as shown on the card
   enter_password_to_confirm: "(we need your current password to confirm your changes)"
   environment: "Umgebung"
@@ -408,6 +428,17 @@ de-CH:
     one: "1 error prohibited this record from being saved"
     other: "%{count} errors prohibited this record from being saved"
   event: Ereignis
+  events: 
+    spree: 
+      cart: 
+        add: 'Add to cart'
+      checkout: 
+        coupon_code_added: "Coupon code added"
+      order: 
+        contents_changed: "Order contents changed"
+      page_view: "Static page viewed"
+      user: 
+        signup: 'User signup'
   existing_customer: "Vorhandener Kunde"
   expiration: "Gültigkeitsdauer"
   expiration_month: "Gültig bis (Monat)"
@@ -464,6 +495,7 @@ de-CH:
   included_in_other_shipment: Included in another Shipment
   included_in_this_shipment: Included in this Shipment
   instructions_to_reset_password: "Fill out the form below and instructions to reset your password will be emailed to you:"
+  insufficient_stock: "Insufficient stock available, only %{on_hand} remaining"
   integration_settings_warning: "If you are changing the billing integration, you must save first before you can edit the integration settings"
   intercept_email_address: Intercept Email Address
   intercept_email_instructions: "Override email recipient and replace with this address."
@@ -482,6 +514,8 @@ de-CH:
       gt: greater than
       gte: greater than or equal to
   items: "Items"
+  landing_page_rule: 
+    path: Path
   last_14_days: "Last 14 Days"
   last_5_orders: "Last 5 Orders"
   last_7_days: "Last 7 Days"
@@ -520,7 +554,6 @@ de-CH:
   mark_shipped: "Als versandt kennzeichnen"
   master_price: Grundpreis
   max_items: Max Items
-  may_be_combined_with_other_promotions: May be combined with other promotions
   meta_description: "Meta-Beschreibung"
   meta_keywords: "Meta-Schlüsselwörter"
   metadata: "Metadaten"
@@ -536,6 +569,7 @@ de-CH:
   new_billing_integration: "Neues Bezahlmodul"
   new_category: "Neue Kategorie"
   new_customer: "Neuer Kunde"
+  new_group: New Group
   new_image: "Neues Bild"
   new_mail_method: New Mail Method
   new_option_type: "Neue Option"
@@ -610,7 +644,6 @@ de-CH:
   order_processed_but_following_items_are_out_of_stock: "Your order has been processed, but following items are out of stock:"
   order_processed_successfully: "Ihre Bestellung wurde erfolgreich bearbeitet"
   order_state: # keys correspond to Checkout state names:
-    # keys correspond to Checkout state names: 
     address: address
     adjustments: adjustments
     awaiting_return: awaiting return
@@ -817,10 +850,23 @@ de-CH:
   products: Produkte
   products_with_zero_inventory_display: "Produkte mit einem Lagerbestand von Null werden %{not} angezeigt"
   promotion: Promotion
+  promotion_action: Promotion Action
+  promotion_action_types: 
+    create_adjustment: 
+      description: Creates a promotion credit adjustment on the order
+      name: Create adjustment
+    create_line_items: 
+      description: Populates the cart with the specified variants and quantities
+      name: Create line items
+    give_store_credit: 
+      description: Gives the user store credit of the amount specified
+      name: Give store credit
+  promotion_actions: Actions
   promotion_form: 
     match_policies: 
       all: Match any of these rules
       any: Match all of these rules
+  promotion_rule: Promotion Rule
   promotion_rule_types: 
     first_order: 
       description: Must be the customer's first order
@@ -828,12 +874,18 @@ de-CH:
     item_total: 
       description: Order total meets these criteria
       name: Item total
+    landing_page: 
+      description: Customer must have visited the specified page
+      name: Landing Page
     product: 
       description: Order includes specified product(s)
       name: Product(s)
     user: 
       description: Available only to the specified users
       name: User
+    user_logged_in: 
+      description: Available only to logged in users
+      name: User Logged In
   promotions: Promotions
   promotions_description: Manage offers and coupons with promotions
   properties: "Eigenschaften"
@@ -964,7 +1016,10 @@ de-CH:
   spree: 
     date: Datum
     time: Uhrzeit
+  spree_alert_checking: "Check for Spree security and release alerts"
+  spree_alert_not_checking: "Not checking for Spree security and release alerts"
   spree_gateway_error_flash_for_checkout: "There was a problem with your payment information. Please check your information and try again."
+  spree_inventory_error_flash_for_insufficient_quantity: "An item in your cart has become unavailable."
   ssl_will_be_used_in_development_and_test_modes: "SSL wird im Development- und Test-Modus benutzt, falls nötig."
   ssl_will_be_used_in_production_mode: "SSL wird im Production-Modus benutzt"
   ssl_will_not_be_used_in_development_and_test_modes: "SSL wird nicht im Development- und Test-Modus benutzt, falls nötig."
@@ -1000,11 +1055,17 @@ de-CH:
   taxon_edit: "Taxonomie bearbeiten"
   taxonomies: "Taxonomien"
   taxonomies_setting_description: "Erzeugen und Verwalten von Taxonomien"
+  taxonomy: Taxonomy
   taxonomy_edit: "Taxonomie bearbeiten"
   taxonomy_tree_error: "Die angeforderte Änderung wurde nicht akzeptiert, und der Baum wurde in seinen vorherigen Zustand versetzt, bitte noch einmal versuchen!"
   taxonomy_tree_instruction: "* Rechtsklick auf ein Kind im Baum öffnet das Menü zum Hinzufügen, Löschen oder Sortieren."
   taxons: "Klassifizierungen"
   test: "Test"
+  test_mailer: 
+    test_email: 
+      greeting: 'Congratulations!'
+      message: 'If you have received this email, then your email settings are correct.'
+      subject: 'Testmail'
   test_mode: "Test-Modus"
   thank_you_for_your_order: "Vielen Dank für ihre Bestellung"
   there_were_problems_with_the_following_fields: "There were problems with the following fields"
@@ -1054,6 +1115,7 @@ de-CH:
     must_be_int: "must be an integer"
     must_be_non_negative: "must be a non-negative value"
   value: "Wert"
+  variant: Variant
   variants: Varianten
   vat: "MwSt."
   version: Version

@@ -18,6 +18,15 @@ vn:
     new: Mới
     update: Cập nhật
   active: "Có hiệu lực"
+  activemodel: 
+    attributes: 
+      promotion: 
+        code: Code
+        description: Description
+        expires_at: Expires at
+        name: Name
+        starts_at: Starts at
+        usage_limit: Usage limit
   activerecord: 
     attributes: 
       address: 
@@ -32,23 +41,6 @@ vn:
         phone: Điện thoại
         state: "Bang"
         zipcode: "Mã bưu điện"
-      checkout: 
-        bill_address: 
-          address1: "Địa chỉ thanh toán"
-          city: "Thành phố"
-          firstname: "Tên"
-          lastname: "Họ"
-          phone: "Điện thoại"
-          state: "Bang"
-          zipcode: "Mã bưu điện"
-        ship_address: 
-          address1: "Địa chỉ"
-          city: "Thành phố"
-          firstname: "Tên"
-          lastname: "Họ"
-          phone: "Điện thoại"
-          state: "Bang"
-          zipcode: "Mã bưu điện"
       country: 
         iso: ISO
         iso3: ISO3
@@ -66,16 +58,37 @@ vn:
       line_item: 
         price: Giá
         quantity: Số lượng
+      option_type: 
+        name: Name
+        presentation: Presentation
       order: 
+        bill_address: 
+          address1: "Billing address street"
+          city: "Billing address city"
+          firstname: "Billing address first name"
+          lastname: "Billing address last name"
+          phone: "Billing address phone"
+          state: "Billing address state"
+          zipcode: "Billing address zipcode"
         checkout_complete: "Hoàn tất thủ tục mua hàng"
         completed_at: "Completed At"
         coupon_code: "Coupon Code"
         ip_address: "Địa chỉ IP"
         item_total: "Tổng số lượng"
         number: Số
+        ship_address: 
+          address1: "Shipping address street"
+          city: "Shipping address city"
+          firstname: "Shipping address first name"
+          lastname: "Shipping address last name"
+          phone: "Shipping address phone"
+          state: "Shipping address state"
+          zipcode: "Shipping address zipcode"
         special_instructions: "Chỉ dẫn đặc biệt"
         state: Bang
         total: Tổng
+      payment_method: 
+        name: Name
       product: 
         available_on: "Có hàng vào"
         cost_price: "Giá"
@@ -94,13 +107,6 @@ vn:
       product_scope: 
         arguments: "Tham số"
         description: "Chú thích"
-      promotion: 
-        code: "Code"
-        description: "Description"
-        expires_at: "Expires at"
-        name: "Name"
-        starts_at: "Starts at"
-        usage_limit: "Usage limit"
       property: 
         name: Tên
         presentation: Trình bày
@@ -126,6 +132,8 @@ vn:
         name: Tên
       user: 
         email: Email
+        password: "Password"
+        password_confirmation: "Password Confirmation"
       variant: 
         cost_price: "Giá"
         depth: Sâu
@@ -217,6 +225,7 @@ vn:
         one: Vùng
         other: Vùng
   add: Thêm
+  add_action_of_type: Add action of type
   add_category: "Thêm loại mặt hàng"
   add_country: "Thêm quốc gia"
   add_option_type: "Thêm kiểu tùy chọn"
@@ -235,12 +244,20 @@ vn:
   adjustment: Điều chỉnh
   adjustment_total: Adjustment Total
   adjustments: Điều chỉnh
+  admin: 
+    mail_methods: 
+      send_testmail: 'Send Testmail'
+      testmail: 
+        delivery_error: 'Testmail delivery error'
+        delivery_success: 'Testmail sent successfully'
+        error: 'Testmail error: %{e}'
   administration: Quản trị
+  advertise: Advertise
   all: "Tất cả"
   all_departments: Tất cả các mục
   allow_backorders: "Cho phép đặt hàng trước"
-  allow_ssl_to_be_used_when_in_developement_and_test_modes: Cho phép sử dụng SSL dưới môi trường phát triển và kiểm tra
-  allow_ssl_to_be_used_when_in_production_mode: Cho phép sử dụng SSL dưới môi trường sản xuất
+  allow_ssl_in_development_and_test: Allow SSL to be used when in development and test modes
+  allow_ssl_in_production: Allow SSL to be used in production mode
   allowed_ssl_in_production_mode: "SSL sẽ %{not} được dùng trong sản xuất"
   already_registered: Đã đăng kí?
   alt_text: Chú thích khác
@@ -357,6 +374,9 @@ vn:
   date_range: "Giới hạn ngày"
   debit: Nợ
   default: Default
+  default_meta_description: Default Meta Description
+  default_meta_keywords: Default Meta Keywords
+  default_seo_title: Default Seo Title
   delete: Xóa
   delivery: Delivery
   depth: Sâu
@@ -395,7 +415,7 @@ vn:
   enable_login_via_login_password: "Sử dụng email và mật khẩu chuẩn"
   enable_login_via_openid: "Dùng OpenID"
   enable_mail_delivery: Cho phép vận chuyển thư
-  enter_atleast_five_letters: Enter atleast five letters of customer name
+  enter_at_least_five_letters: Enter at least five letters of customer name
   enter_exactly_as_shown_on_card: Nhập chính xác những gì ghi trên thẻ
   enter_password_to_confirm: "(we need your current password to confirm your changes)"
   environment: "Môi trường"
@@ -408,6 +428,17 @@ vn:
     one: "1 error prohibited this record from being saved"
     other: "%{count} errors prohibited this record from being saved"
   event: Sự kiện
+  events: 
+    spree: 
+      cart: 
+        add: 'Add to cart'
+      checkout: 
+        coupon_code_added: "Coupon code added"
+      order: 
+        contents_changed: "Order contents changed"
+      page_view: "Static page viewed"
+      user: 
+        signup: 'User signup'
   existing_customer: "Khách hàng hiện hữu"
   expiration: "Mãn hạn"
   expiration_month: "Hết hạn tháng"
@@ -464,6 +495,7 @@ vn:
   included_in_other_shipment: Đã kèm cùng vào kiện vận chuyển khác
   included_in_this_shipment: Đã kèm cùng vào kiện vận chuyển này
   instructions_to_reset_password: "Điền vào mẫu phía dưới và hướng dẫn cách thay đổi mật khẩu sẽ được gửi qua email đến bạn:"
+  insufficient_stock: "Insufficient stock available, only %{on_hand} remaining"
   integration_settings_warning: "Nếu bạn thay đang thay đổi Tích hợp thanh toán, bạn phải lưu trước khi thay đổi thông số tích hợp"
   intercept_email_address: Intercept Email Address
   intercept_email_instructions: "Override email recipient and replace with this address."
@@ -482,6 +514,8 @@ vn:
       gt: greater than
       gte: greater than or equal to
   items: "Số lượng"
+  landing_page_rule: 
+    path: Path
   last_14_days: "14 ngày trước"
   last_5_orders: "5 đơn hàng gần đây nhất"
   last_7_days: "7 ngày trước"
@@ -520,7 +554,6 @@ vn:
   mark_shipped: "Chứng hàng đã chuyển"
   master_price: "Giá chủ"
   max_items: Số hàng tối đa
-  may_be_combined_with_other_promotions: May be combined with other promotions
   meta_description: "Meta miểu tả"
   meta_keywords: "Meta danh sách từ khóa"
   metadata: "Metadata"
@@ -536,6 +569,7 @@ vn:
   new_billing_integration: Tích hợp thanh toán mới
   new_category: "Loại mặt hàng mới"
   new_customer: "Khách hàng mới"
+  new_group: New Group
   new_image: "Hình mới"
   new_mail_method: New Mail Method
   new_option_type: "Kiểu tùy chọn mới"
@@ -610,7 +644,6 @@ vn:
   order_processed_but_following_items_are_out_of_stock: "Đơn đặt hàng của bạn đã được xử lý, nhưng một số sản phẩm sau đã hết hàng:"
   order_processed_successfully: "Đơn đặt hàng của bạn đã được xử lý thành công"
   order_state: # keys correspond to Checkout state names:
-    # keys correspond to Checkout state names: 
     address: address
     adjustments: adjustments
     awaiting_return: awaiting return
@@ -817,10 +850,23 @@ vn:
   products: Sản phẩm
   products_with_zero_inventory_display: "Sản phẩm không có hàng tồn sẽ %{not} được hiển thị"
   promotion: Promotion
+  promotion_action: Promotion Action
+  promotion_action_types: 
+    create_adjustment: 
+      description: Creates a promotion credit adjustment on the order
+      name: Create adjustment
+    create_line_items: 
+      description: Populates the cart with the specified variants and quantities
+      name: Create line items
+    give_store_credit: 
+      description: Gives the user store credit of the amount specified
+      name: Give store credit
+  promotion_actions: Actions
   promotion_form: 
     match_policies: 
       all: Match any of these rules
       any: Match all of these rules
+  promotion_rule: Promotion Rule
   promotion_rule_types: 
     first_order: 
       description: Must be the customer's first order
@@ -828,12 +874,18 @@ vn:
     item_total: 
       description: Order total meets these criteria
       name: Item total
+    landing_page: 
+      description: Customer must have visited the specified page
+      name: Landing Page
     product: 
       description: Order includes specified product(s)
       name: Product(s)
     user: 
       description: Available only to the specified users
       name: User
+    user_logged_in: 
+      description: Available only to logged in users
+      name: User Logged In
   promotions: Promotions
   promotions_description: Manage offers and coupons with promotions
   properties: Đặc tính
@@ -964,7 +1016,10 @@ vn:
   spree: 
     date: Ngày
     time: Giờ
+  spree_alert_checking: "Check for Spree security and release alerts"
+  spree_alert_not_checking: "Not checking for Spree security and release alerts"
   spree_gateway_error_flash_for_checkout: "There was a problem with your payment information. Please check your information and try again."
+  spree_inventory_error_flash_for_insufficient_quantity: "An item in your cart has become unavailable."
   ssl_will_be_used_in_development_and_test_modes: "SSL sẽ không được dùng trong môi trường kiểm tra nếu cần thiết."
   ssl_will_be_used_in_production_mode: "SSL sẽ được dùng trong môi trường sản xuất"
   ssl_will_not_be_used_in_development_and_test_modes: "SSL sẽ không được dùng trong môi trường phát triển nếu cần thiết"
@@ -1000,11 +1055,17 @@ vn:
   taxon_edit: Sửa đổi đơn vị phân loại
   taxonomies: Phân loại
   taxonomies_setting_description: "Tạo và quản lý phân loại"
+  taxonomy: Taxonomy
   taxonomy_edit: "Sửa đổi phân loại"
   taxonomy_tree_error: "Thay đồi theo yêu cầu không được chấp nhận và hệ cây đã quay trở về trạng thái như trước, xin hay thử lại lần nữa."
   taxonomy_tree_instruction: "* Nhấp chuột phải vào 1 phần tử con trong hệ cây để truy cập thực đơn để thêm, xóa và sắp xếp một phần tử con."
   taxons: Đơn vị phân loại
   test: "Kiểm tra"
+  test_mailer: 
+    test_email: 
+      greeting: 'Congratulations!'
+      message: 'If you have received this email, then your email settings are correct.'
+      subject: 'Testmail'
   test_mode: Chế độ kiểm tra
   thank_you_for_your_order: "Cảm ơn đã mua hàng. Xin hãy in ra một bản của trang này để tiện cho việc chứng thực nếu cần."
   there_were_problems_with_the_following_fields: "There were problems with the following fields"
@@ -1054,6 +1115,7 @@ vn:
     must_be_int: "phải là số nguyên"
     must_be_non_negative: "phải là số dương"
   value: Giá trị
+  variant: Variant
   variants: Biến thể
   vat: "VAT"
   version: Phiên bản

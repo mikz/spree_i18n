@@ -22,6 +22,15 @@ sv-SE:
     new: Ny
     update: Uppdatera
   active: "Aktiverad"
+  activemodel: 
+    attributes: 
+      promotion: 
+        code: Code
+        description: Description
+        expires_at: Expires at
+        name: Name
+        starts_at: Starts at
+        usage_limit: Usage limit
   activerecord: 
     attributes: 
       address: 
@@ -36,23 +45,6 @@ sv-SE:
         phone: Telefon
         state: "Delstat"
         zipcode: "Postkod"
-      checkout: 
-        bill_address: 
-          address1: "Faktureringsadress gata"
-          city: "Faktureringsadress stad"
-          firstname: "Faktureringsadress förnamn"
-          lastname: "Faktureringsadress efternamn"
-          phone: "Faktureringsadress telefon"
-          state: "Faktureringsadress delstat"
-          zipcode: "Faktureringsadress postkod"
-        ship_address: 
-          address1: "Leveransadress gata"
-          city: "Leveransadress stad"
-          firstname: "Leveransadress förnamn"
-          lastname: "Leveransadress efternamn"
-          phone: "Leveransadress telefon"
-          state: "Leveransadress delstat"
-          zipcode: "Leveransadress postkod"
       country: 
         iso: ISO
         iso3: ISO3
@@ -70,16 +62,37 @@ sv-SE:
       line_item: 
         price: Pris
         quantity: Antal
+      option_type: 
+        name: Name
+        presentation: Presentation
       order: 
+        bill_address: 
+          address1: "Billing address street"
+          city: "Billing address city"
+          firstname: "Billing address first name"
+          lastname: "Billing address last name"
+          phone: "Billing address phone"
+          state: "Billing address state"
+          zipcode: "Billing address zipcode"
         checkout_complete: "Betalningen genomförd"
         completed_at: "Slutförd"
         coupon_code: "Kupongkod"
         ip_address: "IP-adress"
         item_total: "Nettopris"
         number: Nummer
+        ship_address: 
+          address1: "Shipping address street"
+          city: "Shipping address city"
+          firstname: "Shipping address first name"
+          lastname: "Shipping address last name"
+          phone: "Shipping address phone"
+          state: "Shipping address state"
+          zipcode: "Shipping address zipcode"
         special_instructions: "Speciella anvisningar"
         state: Delstat
         total: "Summa att betala"
+      payment_method: 
+        name: Name
       product: 
         available_on: "Tillgänglig"
         cost_price: "Kostnadspris"
@@ -98,13 +111,6 @@ sv-SE:
       product_scope: 
         arguments: "Argument"
         description: "Beskrivning"
-      promotion: 
-        code: "Kod"
-        description: "Beskrivning"
-        expires_at: "Utlöper"
-        name: "Namn"
-        starts_at: "Startar"
-        usage_limit: "Användningsbegränsning"
       property: 
         name: Namn
         presentation: Presentation
@@ -130,6 +136,8 @@ sv-SE:
         name: Namn
       user: 
         email: Epost
+        password: "Password"
+        password_confirmation: "Password Confirmation"
       variant: 
         cost_price: "Kostnadspris"
         depth: Djup
@@ -221,6 +229,7 @@ sv-SE:
         one: Zon
         other: Zoner
   add: Lägg till
+  add_action_of_type: Add action of type
   add_category: "Lägg till kategori"
   add_country: "Lägg till land"
   add_option_type: "Lägg till alternativtyp"
@@ -239,12 +248,20 @@ sv-SE:
   adjustment: Justering
   adjustment_total: Summa justeringar
   adjustments: Justeringar
+  admin: 
+    mail_methods: 
+      send_testmail: 'Send Testmail'
+      testmail: 
+        delivery_error: 'Testmail delivery error'
+        delivery_success: 'Testmail sent successfully'
+        error: 'Testmail error: %{e}'
   administration: Administration
+  advertise: Advertise
   all: "Alla"
   all_departments: "Alla kategorier"
   allow_backorders: "Tillåt restnoterade"
-  allow_ssl_to_be_used_when_in_developement_and_test_modes: "Använd SSL i utvecklings- och testläge"
-  allow_ssl_to_be_used_when_in_production_mode: "Använd SSL i produtionsläge"
+  allow_ssl_in_development_and_test: Allow SSL to be used when in development and test modes
+  allow_ssl_in_production: Allow SSL to be used in production mode
   allowed_ssl_in_production_mode: "SSL kommer %{not} användas i produktionsläge"
   already_registered: "Redan Registrerad?"
   alt_text: "Alternativ Text"
@@ -361,6 +378,9 @@ sv-SE:
   date_range: "Datumomfång" # Eng ?
   debit: Debitera # Eng ?
   default: Standard
+  default_meta_description: Default Meta Description
+  default_meta_keywords: Default Meta Keywords
+  default_seo_title: Default Seo Title
   delete: Ta bort
   delivery: Utskick
   depth: Djup
@@ -399,7 +419,7 @@ sv-SE:
   enable_login_via_login_password: "Använd epost/lösenord"
   enable_login_via_openid: "Använd OpenID istället"
   enable_mail_delivery: Aktivera skickning av mail
-  enter_atleast_five_letters: Mata in minst fem bokstäver som kundnamn
+  enter_at_least_five_letters: Enter at least five letters of customer name
   enter_exactly_as_shown_on_card: Var god skriv in exakt som det står på kortet
   enter_password_to_confirm: "(vi behöver ditt nuvarande lösenord för att bekräfta dina ändringar)"
   environment: "Miljö"
@@ -412,6 +432,17 @@ sv-SE:
     one: "1 fel hindrade detta inlägg att sparas"
     other: "%{count} fel hindrade detta inlägg att sparas"
   event: Händelse
+  events: 
+    spree: 
+      cart: 
+        add: 'Add to cart'
+      checkout: 
+        coupon_code_added: "Coupon code added"
+      order: 
+        contents_changed: "Order contents changed"
+      page_view: "Static page viewed"
+      user: 
+        signup: 'User signup'
   existing_customer: "Existerande kund"
   expiration: "Utgångsdatum"
   expiration_month: "Utgångsdatum månad"
@@ -468,6 +499,7 @@ sv-SE:
   included_in_other_shipment: Inkluderad i en annan leverans
   included_in_this_shipment: Inkluderad i denna leverans
   instructions_to_reset_password: "Fyll i formuläret nedan så skickar vi instruktioner för att byta ditt lösenord till dig:"
+  insufficient_stock: "Insufficient stock available, only %{on_hand} remaining"
   integration_settings_warning: "Om du ändrar faktureringsintegrationen, måste du först spara innan du kan ändra integrationsinställningar"
   intercept_email_address: Ändra emailadress
   intercept_email_instructions: "Skriv över email-mottagarens adress och ersätt med denna."
@@ -486,6 +518,8 @@ sv-SE:
       gt: större än
       gte: större än eller lika med
   items: "Artiklar"
+  landing_page_rule: 
+    path: Path
   last_14_days: "Senaste 14 dagarna"
   last_5_orders: "Senaste 5 beställningarna"
   last_7_days: "Senaste 7 dagarna"
@@ -524,7 +558,6 @@ sv-SE:
   mark_shipped: "Markera som levererad"
   master_price: "Masterpris"
   max_items: Max Items # Eng
-  may_be_combined_with_other_promotions: Kan kombineras med andra erbjudanden
   meta_description: "Metabeskrivning"
   meta_keywords: "Metanyckelord"
   metadata: "Metadata"
@@ -540,6 +573,7 @@ sv-SE:
   new_billing_integration: Ny faktureringsintegration
   new_category: "Ny kategori"
   new_customer: "Ny kund"
+  new_group: New Group
   new_image: "Ny bild"
   new_mail_method: Ny mailmetod
   new_option_type: "Ny alternativtyp"
@@ -614,7 +648,6 @@ sv-SE:
   order_processed_but_following_items_are_out_of_stock: "Din order har tagits emot, men följande produkter är inte i lager:"
   order_processed_successfully: "Din order har tagits emot."
   order_state: 
-    # keys correspond to Checkout state names: 
     address: adress
     adjustments: justeringar
     awaiting_return: väntar på retur
@@ -821,10 +854,23 @@ sv-SE:
   products: Produkter
   products_with_zero_inventory_display: "Produkter som ej finns i lager kommer %{not} att visas"
   promotion: Kampanj
+  promotion_action: Promotion Action
+  promotion_action_types: 
+    create_adjustment: 
+      description: Creates a promotion credit adjustment on the order
+      name: Create adjustment
+    create_line_items: 
+      description: Populates the cart with the specified variants and quantities
+      name: Create line items
+    give_store_credit: 
+      description: Gives the user store credit of the amount specified
+      name: Give store credit
+  promotion_actions: Actions
   promotion_form: 
     match_policies: 
       all: Matcha någon av dessa regler
       any: Matcha alla dessa regler
+  promotion_rule: Promotion Rule
   promotion_rule_types: 
     first_order: 
       description: Måste vara kundens första order
@@ -832,12 +878,18 @@ sv-SE:
     item_total: 
       description: Totalpriset möter dessa kriterium
       name: Totalpris
+    landing_page: 
+      description: Customer must have visited the specified page
+      name: Landing Page
     product: 
       description: Order inkluderar angivna produkt(er)
       name: Produkt(er)
     user: 
       description: Tillgänglig bara för de angivna användarna
       name: Användare
+    user_logged_in: 
+      description: Available only to logged in users
+      name: User Logged In
   promotions: Kampanjer
   promotions_description: Hantera erbjudanden och kuponger med kampanjer
   properties: Egenskaper
@@ -968,7 +1020,10 @@ sv-SE:
   spree: 
     date: Datum
     time: Tid
+  spree_alert_checking: "Check for Spree security and release alerts"
+  spree_alert_not_checking: "Not checking for Spree security and release alerts"
   spree_gateway_error_flash_for_checkout: "Det var ett problem med din betalningsinformation. Se över din information och försök igen."
+  spree_inventory_error_flash_for_insufficient_quantity: "An item in your cart has become unavailable."
   ssl_will_be_used_in_development_and_test_modes: "SSL kommer att användas i utvecklings- och testläge om nödvändigt."
   ssl_will_be_used_in_production_mode: "SSL kommer att användas i produktionsläge"
   ssl_will_not_be_used_in_development_and_test_modes: "SSL kommer inte att användas i utvecklings- och testläge om nödvändigt."
@@ -1004,11 +1059,17 @@ sv-SE:
   taxon_edit: Redigera underkategori
   taxonomies: Kategorier
   taxonomies_setting_description: "Skapa och hantera kategorier"
+  taxonomy: Taxonomy
   taxonomy_edit: "Ändra kategori"
   taxonomy_tree_error: "Ändringen har inte accepterats och trädet har återställts till sitt tidigare tillstånd. Var god försök igen."
   taxonomy_tree_instruction: "* Högerklicka på en kategori för att komma åt menyn för att lägga till, ta bort eller sortera underkategorier."
   taxons: Underkategorier
   test: "Test"
+  test_mailer: 
+    test_email: 
+      greeting: 'Congratulations!'
+      message: 'If you have received this email, then your email settings are correct.'
+      subject: 'Testmail'
   test_mode: Testläge
   thank_you_for_your_order: "Tack för din beställning. Var god skriv ut denna sida för framtida korrespondens."
   there_were_problems_with_the_following_fields: "Det var problem med följande fält"
@@ -1058,6 +1119,7 @@ sv-SE:
     must_be_int: "måste vara ett heltal"
     must_be_non_negative: "måste vara ett positivt tal"
   value: Värde
+  variant: Variant
   variants: Varianter
   vat: "moms"
   version: Version

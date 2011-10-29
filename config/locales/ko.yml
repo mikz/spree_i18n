@@ -18,6 +18,15 @@ ko:
     new: #New
     update: 수정
   active: "활성"
+  activemodel: 
+    attributes: 
+      promotion: 
+        code: Code
+        description: Description
+        expires_at: Expires at
+        name: Name
+        starts_at: Starts at
+        usage_limit: Usage limit
   activerecord: 
     attributes: 
       address: 
@@ -32,23 +41,6 @@ ko:
         phone: 전화번호
         state: "주"
         zipcode: "우편번호"
-      checkout: 
-        bill_address: 
-          address1: "청구서 주소 street"
-          city: "청구서 주소 city"
-          firstname: "청구서 주소 이름"
-          lastname: "청구서 주소 성"
-          phone: "청구서 주소 전화번호"
-          state: "청구서 주소  state"
-          zipcode: "청구서 주소 우편번호"
-        ship_address: 
-          address1: "배송 주소 street"
-          city: "배송 주소 city"
-          firstname: "배송 주소 이름"
-          lastname: "배송 주소 성"
-          phone: "배송 주소 전화번호"
-          state: "배송 주소 state"
-          zipcode: "배송 주소 우편번호"
       country: 
         iso: ISO
         iso3: ISO3
@@ -66,16 +58,37 @@ ko:
       line_item: 
         price: 가격
         quantity: 수량
+      option_type: 
+        name: Name
+        presentation: Presentation
       order: 
+        bill_address: 
+          address1: "Billing address street"
+          city: "Billing address city"
+          firstname: "Billing address first name"
+          lastname: "Billing address last name"
+          phone: "Billing address phone"
+          state: "Billing address state"
+          zipcode: "Billing address zipcode"
         checkout_complete: "결제 완료"
         completed_at: "에 완료됨"
         coupon_code: "Coupon Code"
         ip_address: "IP 주소"
         item_total: "아이템 합계"
         number: 번호
+        ship_address: 
+          address1: "Shipping address street"
+          city: "Shipping address city"
+          firstname: "Shipping address first name"
+          lastname: "Shipping address last name"
+          phone: "Shipping address phone"
+          state: "Shipping address state"
+          zipcode: "Shipping address zipcode"
         special_instructions: "요청사항"
         state: 상태
         total: 합계
+      payment_method: 
+        name: Name
       product: 
         available_on: "시작일"
         cost_price: "비용"
@@ -94,13 +107,6 @@ ko:
       product_scope: 
         arguments: "인수"
         description: "설명"
-      promotion: 
-        code: "Code"
-        description: "Description"
-        expires_at: "Expires at"
-        name: "Name"
-        starts_at: "Starts at"
-        usage_limit: "Usage limit"
       property: 
         name: 이름
         presentation: 표시
@@ -126,6 +132,8 @@ ko:
         name: 이름
       user: 
         email: 이메일
+        password: "Password"
+        password_confirmation: "Password Confirmation"
       variant: 
         cost_price: "비용"
         depth: 높이
@@ -217,6 +225,7 @@ ko:
         one: 존
         other: 존
   add: 추가
+  add_action_of_type: Add action of type
   add_category: "Category 추가"
   add_country: "국가 추가"
   add_option_type: "옵션 타입 추가"
@@ -235,12 +244,20 @@ ko:
   adjustment: 정산
   adjustment_total: 정산 합계
   adjustments: 정산
+  admin: 
+    mail_methods: 
+      send_testmail: 'Send Testmail'
+      testmail: 
+        delivery_error: 'Testmail delivery error'
+        delivery_success: 'Testmail sent successfully'
+        error: 'Testmail error: %{e}'
   administration: 운영
+  advertise: Advertise
   all: "전체"
   all_departments: All departments
   allow_backorders: "Allow Backorders"
-  allow_ssl_to_be_used_when_in_developement_and_test_modes: 개발과 테스트 모드에서 SSL을 사용하도록 허용
-  allow_ssl_to_be_used_when_in_production_mode: 프로덕션 모드에서 SSL을 사용하도록 허용
+  allow_ssl_in_development_and_test: Allow SSL to be used when in development and test modes
+  allow_ssl_in_production: Allow SSL to be used in production mode
   allowed_ssl_in_production_mode: "프로덕션 모드에서 SSL이 %{not} 사용 될 것입니다"
   already_registered: 등록되었습니까?
   alt_text: 대체 텍스트
@@ -357,6 +374,9 @@ ko:
   date_range: "날짜 범위"
   debit: #Debit
   default: 기본
+  default_meta_description: Default Meta Description
+  default_meta_keywords: Default Meta Keywords
+  default_seo_title: Default Seo Title
   delete: 삭제
   delivery: #Delivery
   depth: 높이
@@ -395,7 +415,7 @@ ko:
   enable_login_via_login_password: "기본 이멜/비밀번호 사용"
   enable_login_via_openid: "대신해서 오픈ID 사용"
   enable_mail_delivery: #Enable Mail Delivery
-  enter_atleast_five_letters: #Enter atleast five letters of customer name
+  enter_at_least_five_letters: Enter at least five letters of customer name
   enter_exactly_as_shown_on_card: #Please enter exactly as shown on the card
   enter_password_to_confirm: #"(we need your current password to confirm your changes)"
   environment: "환경"
@@ -408,6 +428,17 @@ ko:
     one: "저장하는 중에 문제가 발생했습니다."
     other: "저장하는 중에 문제 %{count}개가 발생했습니다."
   event: 이벤트
+  events: 
+    spree: 
+      cart: 
+        add: 'Add to cart'
+      checkout: 
+        coupon_code_added: "Coupon code added"
+      order: 
+        contents_changed: "Order contents changed"
+      page_view: "Static page viewed"
+      user: 
+        signup: 'User signup'
   existing_customer: #"Existing Customer"
   expiration: "유효 기간"
   expiration_month: "유효 달"
@@ -464,6 +495,7 @@ ko:
   included_in_other_shipment: 다른 배송에 포함됨
   included_in_this_shipment: 배송에 포함됨
   instructions_to_reset_password: #"Fill out the form below and instructions to reset your password will be emailed to you:"
+  insufficient_stock: "Insufficient stock available, only %{on_hand} remaining"
   integration_settings_warning: #"If you are changing the billing integration, you must save first before you can edit the integration settings"
   intercept_email_address: #Intercept Email Address
   intercept_email_instructions: #"Override email recipient and replace with this address."
@@ -482,6 +514,8 @@ ko:
       gt: 보다 큰
       gte: 보다 크거나 같은
   items: "아이템"
+  landing_page_rule: 
+    path: Path
   last_14_days: "지난 14일"
   last_5_orders: "최근 주문 5개"
   last_7_days: "지난 7일"
@@ -520,7 +554,6 @@ ko:
   mark_shipped: #"Mark Shipped"
   master_price: "기본 가격"
   max_items: 최대 아이템
-  may_be_combined_with_other_promotions: #May be combined with other promotions
   meta_description: "메타 설명"
   meta_keywords: "메타 키워드"
   metadata: 메타데이터
@@ -536,6 +569,7 @@ ko:
   new_billing_integration: #New Billing Integration
   new_category: "새 category"
   new_customer: "새 고객"
+  new_group: New Group
   new_image: "새 이미지"
   new_mail_method: 새 메일 메소드
   new_option_type: "새 옵션 타입"
@@ -610,7 +644,6 @@ ko:
   order_processed_but_following_items_are_out_of_stock: "주문은 처리됐지만 다음 아이템들이 품절입니다:"
   order_processed_successfully: #"Your order has been processed successfully"
   order_state: 
-    # keys correspond to Checkout state names: 
     address: 주소
     adjustments: 정산
     awaiting_return: #awaiting return
@@ -817,10 +850,23 @@ ko:
   products: 상품
   products_with_zero_inventory_display: #"Products with a zero inventory will %{not} be displayed"
   promotion: Promotion
+  promotion_action: Promotion Action
+  promotion_action_types: 
+    create_adjustment: 
+      description: Creates a promotion credit adjustment on the order
+      name: Create adjustment
+    create_line_items: 
+      description: Populates the cart with the specified variants and quantities
+      name: Create line items
+    give_store_credit: 
+      description: Gives the user store credit of the amount specified
+      name: Give store credit
+  promotion_actions: Actions
   promotion_form: 
     match_policies: 
       all: 이 규칙에 하나라도 일치
       any: 이 규칙에 모두 일치
+  promotion_rule: Promotion Rule
   promotion_rule_types: 
     first_order: 
       description: #Must be the customer's first order
@@ -828,12 +874,18 @@ ko:
     item_total: 
       description: #Order total meets these criteria
       name: #Item total
+    landing_page: 
+      description: Customer must have visited the specified page
+      name: Landing Page
     product: 
       description: #Order includes specified product(s)
       name: #Product(s)
     user: 
       description: #Available only to the specified users
       name: #User
+    user_logged_in: 
+      description: Available only to logged in users
+      name: User Logged In
   promotions: #Promotions
   promotions_description: #Manage offers and coupons with promotions
   properties: 속성
@@ -964,7 +1016,10 @@ ko:
   spree: 
     date: 날짜
     time: 시간
+  spree_alert_checking: "Check for Spree security and release alerts"
+  spree_alert_not_checking: "Not checking for Spree security and release alerts"
   spree_gateway_error_flash_for_checkout: #"There was a problem with your payment information. Please check your information and try again."
+  spree_inventory_error_flash_for_insufficient_quantity: "An item in your cart has become unavailable."
   ssl_will_be_used_in_development_and_test_modes: #"SSL will be used in development and test mode if necessary."
   ssl_will_be_used_in_production_mode: #"SSL will be used in production mode"
   ssl_will_not_be_used_in_development_and_test_modes: #"SSL will not be used in development and test mode if necessary."
@@ -1000,11 +1055,17 @@ ko:
   taxon_edit: 분류 편집
   taxonomies: 분류
   taxonomies_setting_description: "Create and manage taxonomies"
+  taxonomy: Taxonomy
   taxonomy_edit: #"Edit taxonomy"
   taxonomy_tree_error: #"The requested change has not been accepted and the tree has been returned to its previous state, please try again."
   taxonomy_tree_instruction: #"* Right click a child in the tree to access the menu for adding, deleting or sorting a child."
   taxons: 분류
   test: "테스트"
+  test_mailer: 
+    test_email: 
+      greeting: 'Congratulations!'
+      message: 'If you have received this email, then your email settings are correct.'
+      subject: 'Testmail'
   test_mode: "테스트 모드"
   thank_you_for_your_order: #"Thank you for your business.  Please print out a copy of this confirmation page for your records."
   there_were_problems_with_the_following_fields: "다음 값들에 문제가 있습니다"
@@ -1054,6 +1115,7 @@ ko:
     must_be_int: #"must be an integer"
     must_be_non_negative: #"must be a non-negative value"
   value: 값
+  variant: Variant
   variants: 배리언트
   vat: 부가세
   version: 버전

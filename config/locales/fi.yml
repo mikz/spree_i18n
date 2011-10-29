@@ -18,6 +18,15 @@ fi:
     new: Uusi
     update: Päivitä
   active: Käytössä
+  activemodel: 
+    attributes: 
+      promotion: 
+        code: Code
+        description: Description
+        expires_at: Expires at
+        name: Name
+        starts_at: Starts at
+        usage_limit: Usage limit
   activerecord: 
     attributes: 
       address: 
@@ -32,23 +41,6 @@ fi:
         phone: Puhelin
         state: Lääni/osavaltio
         zipcode: Postinumero
-      checkout: 
-        bill_address: 
-          address1: Osoite (laskutus)
-          city: Paikkakunta (laskutus)
-          firstname: Etunimi (laskutus)
-          lastname: Sukunimi (laskutus)
-          phone: Puhelin (laskutus)
-          state: Lääni/osavaltio (laskutus)
-          zipcode: Postinumero (laskutus)
-        ship_address: 
-          address1: Osoite (toimitus)
-          city: Paikkakunta (toimitus)
-          firstname: Etunimi (toimitus)
-          lastname: Sukunimi (toimitus)
-          phone: Puhelin (toimitus)
-          state: Lääni/osavaltio (toimitus)
-          zipcode: Postinumero (toimitus)
       country: 
         iso: ISO
         iso3: ISO3
@@ -66,16 +58,37 @@ fi:
       line_item: 
         price: Hinta
         quantity: Määrä
+      option_type: 
+        name: Name
+        presentation: Presentation
       order: 
+        bill_address: 
+          address1: "Billing address street"
+          city: "Billing address city"
+          firstname: "Billing address first name"
+          lastname: "Billing address last name"
+          phone: "Billing address phone"
+          state: "Billing address state"
+          zipcode: "Billing address zipcode"
         checkout_complete: Tilaus lähetetty
         completed_at: "Completed At"
         coupon_code: "Coupon Code"
         ip_address: IP-osoite
         item_total: Tuotteita yhteensä
         number: Tilausnumero
+        ship_address: 
+          address1: "Shipping address street"
+          city: "Shipping address city"
+          firstname: "Shipping address first name"
+          lastname: "Shipping address last name"
+          phone: "Shipping address phone"
+          state: "Shipping address state"
+          zipcode: "Shipping address zipcode"
         special_instructions: Erikoisohjeet
         state: Tila
         total: Yhteensä
+      payment_method: 
+        name: Name
       product: 
         available_on: Tulossa
         cost_price: Kustannushinta
@@ -94,13 +107,6 @@ fi:
       product_scope: 
         arguments: Argumentit
         description: Kuvaus
-      promotion: 
-        code: "Code"
-        description: "Description"
-        expires_at: "Expires at"
-        name: "Name"
-        starts_at: "Starts at"
-        usage_limit: "Usage limit"
       property: 
         name: Nimi
         presentation: Esitys
@@ -126,6 +132,8 @@ fi:
         name: Nimi
       user: 
         email: Sähköposti
+        password: "Password"
+        password_confirmation: "Password Confirmation"
       variant: 
         cost_price: Kustannushinta
         depth: Syvyys
@@ -217,6 +225,7 @@ fi:
         one: Alue
         other: Alueet
   add: Lisää
+  add_action_of_type: Add action of type
   add_category: Lisää kategoria
   add_country: Lisää maa
   add_option_type: Lisää valintatyyppi
@@ -235,12 +244,20 @@ fi:
   adjustment: Säätö
   adjustment_total: Adjustment Total
   adjustments: Säädöt
+  admin: 
+    mail_methods: 
+      send_testmail: 'Send Testmail'
+      testmail: 
+        delivery_error: 'Testmail delivery error'
+        delivery_success: 'Testmail sent successfully'
+        error: 'Testmail error: %{e}'
   administration: Hallinnointi
+  advertise: Advertise
   all: Kaikki
   all_departments: "Kaikki osastot"
   allow_backorders: "Salli jälkitoimitukset"
-  allow_ssl_to_be_used_when_in_developement_and_test_modes: "Salli SSL:n käyttö kehitys- ja testiympäristöissä"
-  allow_ssl_to_be_used_when_in_production_mode: "Salli SSL:n käyttö vain tuotantoympäristössä"
+  allow_ssl_in_development_and_test: Allow SSL to be used when in development and test modes
+  allow_ssl_in_production: Allow SSL to be used in production mode
   allowed_ssl_in_production_mode: "SSL:ää %{not} käytetä/käytetään tuotannossa"
   already_registered: "Jo rekisteröitynyt?"
   alt_text: Alternative Text
@@ -357,6 +374,9 @@ fi:
   date_range: "Päivämäärä (mistä mihin)"
   debit: Debit
   default: Default
+  default_meta_description: Default Meta Description
+  default_meta_keywords: Default Meta Keywords
+  default_seo_title: Default Seo Title
   delete: Poista
   delivery: Delivery
   depth: Syvyys
@@ -395,7 +415,7 @@ fi:
   enable_login_via_login_password: "Käytä standardimuotoista sähköpostia/salasanaa"
   enable_login_via_openid: "Käytä OpenID:tä sen sijaan"
   enable_mail_delivery: "Salli sähköpostin toimitus"
-  enter_atleast_five_letters: Enter atleast five letters of customer name
+  enter_at_least_five_letters: Enter at least five letters of customer name
   enter_exactly_as_shown_on_card: "Kirjoita täsmälleen samoin kuin kortissa lukee"
   enter_password_to_confirm: "(we need your current password to confirm your changes)"
   environment: Ympäristö
@@ -408,6 +428,17 @@ fi:
     one: "1 error prohibited this record from being saved"
     other: "%{count} errors prohibited this record from being saved"
   event: Tapahtuma
+  events: 
+    spree: 
+      cart: 
+        add: 'Add to cart'
+      checkout: 
+        coupon_code_added: "Coupon code added"
+      order: 
+        contents_changed: "Order contents changed"
+      page_view: "Static page viewed"
+      user: 
+        signup: 'User signup'
   existing_customer: "Olemassaoleva asiakas"
   expiration: Erääntyminen
   expiration_month: Erääntymiskuukausi
@@ -464,6 +495,7 @@ fi:
   included_in_other_shipment: Sisällytetty toiseen toimitukseen
   included_in_this_shipment: Sisällytetty tähän toimitukseen
   instructions_to_reset_password: "Täytä alla oleva lomake, ja ohjeet salasanan palauttamiseksi lähetetään sähköpostilla:"
+  insufficient_stock: "Insufficient stock available, only %{on_hand} remaining"
   integration_settings_warning: "Jos vaihdat laskutusintegraatiota, sinun täytyy tallentaa ennen kuin muokkaat integraation asetuksia."
   intercept_email_address: Intercept Email Address
   intercept_email_instructions: "Override email recipient and replace with this address."
@@ -482,6 +514,8 @@ fi:
       gt: greater than
       gte: greater than or equal to
   items: Tuotteet
+  landing_page_rule: 
+    path: Path
   last_14_days: "Viimeiset 14 päivää"
   last_5_orders: "Viimeiset 5 tilausta"
   last_7_days: "Viimeiset 7 päivää"
@@ -520,7 +554,6 @@ fi:
   mark_shipped: "Merkitse toimitetuksi"
   master_price: Toimitushinta
   max_items: "Tuotteiden maksimimäärä"
-  may_be_combined_with_other_promotions: May be combined with other promotions
   meta_description: Meta-kuvaus
   meta_keywords: Meta-avainsanat
   metadata: Metadata
@@ -536,6 +569,7 @@ fi:
   new_billing_integration: "Uusi laskutusintegraatio"
   new_category: "Uusi kategoria"
   new_customer: "Uusi asiakas"
+  new_group: New Group
   new_image: "Uusi kuva"
   new_mail_method: New Mail Method
   new_option_type: "Uusi valintatyyppi"
@@ -610,7 +644,6 @@ fi:
   order_processed_but_following_items_are_out_of_stock: "Tilauksenne on käsitelty, mutta seuraavat tuotteet ovat loppu:"
   order_processed_successfully: "Tilauksenne käsitelty onnistuneesti"
   order_state: # keys correspond to Checkout state names:
-    # keys correspond to Checkout state names: 
     address: address
     adjustments: adjustments
     awaiting_return: awaiting return
@@ -817,10 +850,23 @@ fi:
   products: Tuotteet
   products_with_zero_inventory_display: "Tuotteita, joden varastosaldo 0 %{not} näytetä(än)"
   promotion: Promotion
+  promotion_action: Promotion Action
+  promotion_action_types: 
+    create_adjustment: 
+      description: Creates a promotion credit adjustment on the order
+      name: Create adjustment
+    create_line_items: 
+      description: Populates the cart with the specified variants and quantities
+      name: Create line items
+    give_store_credit: 
+      description: Gives the user store credit of the amount specified
+      name: Give store credit
+  promotion_actions: Actions
   promotion_form: 
     match_policies: 
       all: Match any of these rules
       any: Match all of these rules
+  promotion_rule: Promotion Rule
   promotion_rule_types: 
     first_order: 
       description: Must be the customer's first order
@@ -828,12 +874,18 @@ fi:
     item_total: 
       description: Order total meets these criteria
       name: Item total
+    landing_page: 
+      description: Customer must have visited the specified page
+      name: Landing Page
     product: 
       description: Order includes specified product(s)
       name: Product(s)
     user: 
       description: Available only to the specified users
       name: User
+    user_logged_in: 
+      description: Available only to logged in users
+      name: User Logged In
   promotions: Promotions
   promotions_description: Manage offers and coupons with promotions
   properties: Ominaisuudet
@@ -964,7 +1016,10 @@ fi:
   spree: 
     date: Päivämäärä
     time: Kellonaika
+  spree_alert_checking: "Check for Spree security and release alerts"
+  spree_alert_not_checking: "Not checking for Spree security and release alerts"
   spree_gateway_error_flash_for_checkout: "There was a problem with your payment information. Please check your information and try again."
+  spree_inventory_error_flash_for_insufficient_quantity: "An item in your cart has become unavailable."
   ssl_will_be_used_in_development_and_test_modes: "SSL:ää käytetään tarvittaessa kehitys- ja testiympäristössä."
   ssl_will_be_used_in_production_mode: "SSL:ää käytetään tuotantoympäristössä"
   ssl_will_not_be_used_in_development_and_test_modes: "SSL:ää ei käytetä tarvittaessa kehitys- ja testiympäristössä."
@@ -1000,11 +1055,17 @@ fi:
   taxon_edit: Muokkaa taksonia
   taxonomies: Taksonomiat
   taxonomies_setting_description: "Luo ja hallinnoi taksonomioita"
+  taxonomy: Taxonomy
   taxonomy_edit: "Muokkaa taksonomiaa"
   taxonomy_tree_error: "Vaadittua muutosta ei hyväksytty. Puu on palautettu edelliseen tilaansa. Yritä uudelleen."
   taxonomy_tree_instruction: "* Klikkaa lasta päästäksesi valikkoon, josta voit lisätä, poistaa ja järjestää lapsia."
   taxons: Taksonit
   test: Testaa
+  test_mailer: 
+    test_email: 
+      greeting: 'Congratulations!'
+      message: 'If you have received this email, then your email settings are correct.'
+      subject: 'Testmail'
   test_mode: Testimoodi
   thank_you_for_your_order: "Kiitos kaupankäynnistä. Tulosta tarvittaessa kopio tästä vahvistuksesta."
   there_were_problems_with_the_following_fields: "There were problems with the following fields"
@@ -1054,6 +1115,7 @@ fi:
     must_be_int: täytyy olla kokonaisluku
     must_be_non_negative: täytyy olla ei-negatiivinen
   value: Arvo
+  variant: Variant
   variants: Variantit
   vat: ALV
   version: Versio

@@ -18,6 +18,15 @@ es:
     new: Nueva
     update: Actualizar
   active: Activo
+  activemodel: 
+    attributes: 
+      promotion: 
+        code: Code
+        description: Description
+        expires_at: Expires at
+        name: Name
+        starts_at: Starts at
+        usage_limit: Usage limit
   activerecord: 
     attributes: 
       address: 
@@ -32,23 +41,6 @@ es:
         phone: Teléfono
         state: Estado
         zipcode: "Código postal"
-      checkout: 
-        bill_address: 
-          address1: "Dirección de factura, calle"
-          city: "Dirección de factura, ciudad"
-          firstname: "Dirección de factura, nombre"
-          lastname: "Dirección de factura, apellidos"
-          phone: "Dirección de factura, teléfono"
-          state: "Dirección de factura, provincia"
-          zipcode: "Dirección de factura, código postal"
-        ship_address: 
-          address1: "Dirección de envío, calle"
-          city: "Dirección de envío, ciudad"
-          firstname: "Dirección de envío, nombre"
-          lastname: "Dirección de envío, apellidos"
-          phone: "Dirección de envío, teléfono"
-          state: "Dirección de envío, provincia"
-          zipcode: "Dirección de envío, código postal"
       country: 
         iso: ISO
         iso3: ISO3
@@ -66,16 +58,37 @@ es:
       line_item: 
         price: Precio
         quantity: Cantidad
+      option_type: 
+        name: Name
+        presentation: Presentation
       order: 
+        bill_address: 
+          address1: "Billing address street"
+          city: "Billing address city"
+          firstname: "Billing address first name"
+          lastname: "Billing address last name"
+          phone: "Billing address phone"
+          state: "Billing address state"
+          zipcode: "Billing address zipcode"
         checkout_complete: "Pedido completado"
         completed_at: "Completado el"
         coupon_code: "Código de cupón"
         ip_address: "Dirección IP"
         item_total: "Total artículos"
         number: Número
+        ship_address: 
+          address1: "Shipping address street"
+          city: "Shipping address city"
+          firstname: "Shipping address first name"
+          lastname: "Shipping address last name"
+          phone: "Shipping address phone"
+          state: "Shipping address state"
+          zipcode: "Shipping address zipcode"
         special_instructions: "Instrucciones especiales"
         state: Estado
         total: Total
+      payment_method: 
+        name: Name
       product: 
         available_on: "Disponible en"
         cost_price: "Precio de coste"
@@ -94,13 +107,6 @@ es:
       product_scope: 
         arguments: "Argumentos"
         description: "Descripción"
-      promotion: 
-        code: "Codigo"
-        description: "Descripción"
-        expires_at: "Caduca el"
-        name: "Nombre"
-        starts_at: "Comienza el"
-        usage_limit: "Límite de uso"
       property: 
         name: Nombre
         presentation: Presentación
@@ -126,6 +132,8 @@ es:
         name: Nombre
       user: 
         email: Email
+        password: "Password"
+        password_confirmation: "Password Confirmation"
       variant: 
         cost_price: "Precio de coste"
         depth: Profundidad
@@ -217,6 +225,7 @@ es:
         one: Zona
         other: Zonas
   add: Añadir
+  add_action_of_type: Add action of type
   add_category: "Añadir Categoría"
   add_country: "Añadir País"
   add_option_type: "Añadir tipo de opción"
@@ -235,12 +244,20 @@ es:
   adjustment: Ajuste
   adjustment_total: Ajuste total
   adjustments: Ajustes
+  admin: 
+    mail_methods: 
+      send_testmail: 'Send Testmail'
+      testmail: 
+        delivery_error: 'Testmail delivery error'
+        delivery_success: 'Testmail sent successfully'
+        error: 'Testmail error: %{e}'
   administration: Administración
+  advertise: Advertise
   all: "Todos"
   all_departments: Todos los departamentos
   allow_backorders: "Permitir devoluciones"
-  allow_ssl_to_be_used_when_in_developement_and_test_modes: Permitir el uso de SSL en los modos de desarrollo y prueba
-  allow_ssl_to_be_used_when_in_production_mode: Permitir el uso de SSL en producción
+  allow_ssl_in_development_and_test: Allow SSL to be used when in development and test modes
+  allow_ssl_in_production: Allow SSL to be used in production mode
   allowed_ssl_in_production_mode: "SSL %{not} se utilizará en producción"
   already_registered: ¿Ya está registrado?
   alt_text: Texto alternativo
@@ -357,6 +374,9 @@ es:
   date_range: "Rango de Fecha"
   debit: Débito
   default: Por omisión
+  default_meta_description: Default Meta Description
+  default_meta_keywords: Default Meta Keywords
+  default_seo_title: Default Seo Title
   delete: Eliminar
   delivery: Envío
   depth: Profundidad
@@ -395,7 +415,7 @@ es:
   enable_login_via_login_password: "Usar email/contraseña estándar"
   enable_login_via_openid: "Usar OpenID en su lugar"
   enable_mail_delivery: Habilitar envio por correo
-  enter_atleast_five_letters: Introduzca al menos cinco caracteres como nombre de cliente
+  enter_at_least_five_letters: Enter at least five letters of customer name
   enter_exactly_as_shown_on_card: Por favor, introdúzcalo tal como se ve en la tarjeta
   enter_password_to_confirm: "(necesitamos su contraseña actual para confirmar los cambios)"
   environment: "Entorno"
@@ -408,6 +428,17 @@ es:
     one: "1 error impidió que no pudiera guardarse el registro"
     other: "%{count} errores impidieron que no pudiera guardarse el registro"
   event: Evento
+  events: 
+    spree: 
+      cart: 
+        add: 'Add to cart'
+      checkout: 
+        coupon_code_added: "Coupon code added"
+      order: 
+        contents_changed: "Order contents changed"
+      page_view: "Static page viewed"
+      user: 
+        signup: 'User signup'
   existing_customer: "Cliente existente"
   expiration: "Caducidad"
   expiration_month: "Mes de vencimiento"
@@ -464,6 +495,7 @@ es:
   included_in_other_shipment: Incluido en otro envío
   included_in_this_shipment: Incluido en éste envío
   instructions_to_reset_password: "Rellene el formulario y recibirá por email instrucciones sobre cómo reiniciar su password:"
+  insufficient_stock: "Insufficient stock available, only %{on_hand} remaining"
   integration_settings_warning: "Si está modificando la integración de facturación, debe guardarlo antes de poder editar su configuración"
   intercept_email_address: Interceptar dirección de Email
   intercept_email_instructions: "Sustituir el receptor del email con ésta dirección."
@@ -482,6 +514,8 @@ es:
       gt: mayor que
       gte: mayor o igual que
   items: "Elementos"
+  landing_page_rule: 
+    path: Path
   last_14_days: "Últimos 14 días"
   last_5_orders: "Últimos 7 pedidos"
   last_7_days: "Últimos 7 días"
@@ -511,7 +545,7 @@ es:
   login_name: "Nombre de usuario"
   logout: "Cerrar sesión"
   look_for_similar_items: Buscar artículos similares
-  maestro_or_solo_cards: Maestro/Sólo Tarjetas 
+  maestro_or_solo_cards: Maestro/Sólo Tarjetas
   mail_delivery_enabled: "La entrega de correo está habilitada"
   mail_delivery_not_enabled: "La entrega de correo está deshabilitada"
   mail_methods: Métodos de email
@@ -520,7 +554,6 @@ es:
   mark_shipped: "Marcar como enviado"
   master_price: "Precio principal"
   max_items: Máximo de elementos
-  may_be_combined_with_other_promotions: Puede combinarse con otras promociones
   meta_description: "Meta descripción"
   meta_keywords: "Meta palabras clave"
   metadata: "Metadatos"
@@ -536,6 +569,7 @@ es:
   new_billing_integration: Nueva integración de facturación
   new_category: "Nueva categoría"
   new_customer: "Nuevo cliente"
+  new_group: New Group
   new_image: "Nueva Imagen"
   new_mail_method: Nuevo método de email
   new_option_type: "Nuevo tipo de opción"
@@ -610,7 +644,6 @@ es:
   order_processed_but_following_items_are_out_of_stock: "Su pedido ha sido procesado, pero los siguientes elementos no están disponibles:"
   order_processed_successfully: "Su pedido se ha procesado correctamente"
   order_state: # keys correspond to Checkout state names:
-    # keys correspond to Checkout state names: 
     address: dirección
     adjustments: ajustes
     awaiting_return: esperando respuesta
@@ -817,10 +850,23 @@ es:
   products: Productos
   products_with_zero_inventory_display: "Productos sin existencias %{not} serán mostrados"
   promotion: Promoción
+  promotion_action: Promotion Action
+  promotion_action_types: 
+    create_adjustment: 
+      description: Creates a promotion credit adjustment on the order
+      name: Create adjustment
+    create_line_items: 
+      description: Populates the cart with the specified variants and quantities
+      name: Create line items
+    give_store_credit: 
+      description: Gives the user store credit of the amount specified
+      name: Give store credit
+  promotion_actions: Actions
   promotion_form: 
     match_policies: 
       all: Coincide con alguna de las siguientes reglas
       any: Coincide con todas las siguientes reglas
+  promotion_rule: Promotion Rule
   promotion_rule_types: 
     first_order: 
       description: Debe ser el primer pedido del cliente
@@ -828,12 +874,18 @@ es:
     item_total: 
       description: Total del pedido coincide con los siguientes criterios
       name: Total de elementos
+    landing_page: 
+      description: Customer must have visited the specified page
+      name: Landing Page
     product: 
       description: El pedido incluye los siguientes productos
       name: Productos
     user: 
       description: Disponible sólo para los siguientes clientes
       name: Cliente
+    user_logged_in: 
+      description: Available only to logged in users
+      name: User Logged In
   promotions: Promociones
   promotions_description: Configurar ofertas y cupones con promociones
   properties: "Propiedades"
@@ -964,7 +1016,10 @@ es:
   spree: 
     date: Fecha
     time: Hora
+  spree_alert_checking: "Check for Spree security and release alerts"
+  spree_alert_not_checking: "Not checking for Spree security and release alerts"
   spree_gateway_error_flash_for_checkout: "hubo un problema con su información de pago. Por favor, revísela e inténtelo de nuevo."
+  spree_inventory_error_flash_for_insufficient_quantity: "An item in your cart has become unavailable."
   ssl_will_be_used_in_development_and_test_modes: "Se utilizará SSL en los modos desarrollo y test si es necesario."
   ssl_will_be_used_in_production_mode: "Se utilizará SSL en modo producción"
   ssl_will_not_be_used_in_development_and_test_modes: "No se utilizará SSL en los modos desarrollo y test si es necesario."
@@ -1000,11 +1055,17 @@ es:
   taxon_edit: Editar categoría
   taxonomies: "Categorías"
   taxonomies_setting_description: "Crear y manejar taxonomías"
+  taxonomy: Taxonomy
   taxonomy_edit: "Editar categorías"
   taxonomy_tree_error: "El cambio solicitado no ha sido aceptado y el árbol ha vuelto a su estado anterior. Por favor, inténtelo de nuevo."
   taxonomy_tree_instruction: "* Click derecho en uno de los nodos para acceder al menu para añadir, eliminar u ordenar nodos"
   taxons: Categorías
   test: "Test"
+  test_mailer: 
+    test_email: 
+      greeting: 'Congratulations!'
+      message: 'If you have received this email, then your email settings are correct.'
+      subject: 'Testmail'
   test_mode: Modo Prueba
   thank_you_for_your_order: "Gracias por su pedido"
   there_were_problems_with_the_following_fields: "Han habido problemas con los siguientes campos: "
@@ -1054,6 +1115,7 @@ es:
     must_be_int: "debe ser un entero"
     must_be_non_negative: "debe ser un valor no negativo"
   value: "valor"
+  variant: Variant
   variants: Variantes
   vat: "IVA"
   version: Versión

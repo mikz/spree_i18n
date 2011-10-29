@@ -18,6 +18,15 @@ en-GB:
     new: New
     update: Update
   active: "Active"
+  activemodel: 
+    attributes: 
+      promotion: 
+        code: Code
+        description: Description
+        expires_at: Expires at
+        name: Name
+        starts_at: Starts at
+        usage_limit: Usage limit
   activerecord: 
     attributes: 
       address: 
@@ -32,23 +41,6 @@ en-GB:
         phone: Phone
         state: "State"
         zipcode: "Post Code"
-      checkout: 
-        bill_address: 
-          address1: "Billing address street"
-          city: "Billing address city"
-          firstname: "Billing address first name"
-          lastname: "Billing address last name"
-          phone: "Billing address phone"
-          state: "Billing address state"
-          zipcode: "Billing address zipcode"
-        ship_address: 
-          address1: "Shipping address street"
-          city: "Shipping address city"
-          firstname: "Shipping address first name"
-          lastname: "Shipping address last name"
-          phone: "Shipping address phone"
-          state: "Shipping address state"
-          zipcode: "Shipping address zipcode"
       country: 
         iso: ISO
         iso3: ISO3
@@ -66,16 +58,37 @@ en-GB:
       line_item: 
         price: Price
         quantity: Quantity
+      option_type: 
+        name: Name
+        presentation: Presentation
       order: 
+        bill_address: 
+          address1: "Billing address street"
+          city: "Billing address city"
+          firstname: "Billing address first name"
+          lastname: "Billing address last name"
+          phone: "Billing address phone"
+          state: "Billing address state"
+          zipcode: "Billing address zipcode"
         checkout_complete: "Checkout Complete"
         completed_at: "Completed At"
         coupon_code: "Coupon Code"
         ip_address: "IP Address"
         item_total: "Item Total"
         number: Number
+        ship_address: 
+          address1: "Shipping address street"
+          city: "Shipping address city"
+          firstname: "Shipping address first name"
+          lastname: "Shipping address last name"
+          phone: "Shipping address phone"
+          state: "Shipping address state"
+          zipcode: "Shipping address zipcode"
         special_instructions: "Special Instructions"
         state: State
         total: Total
+      payment_method: 
+        name: Name
       product: 
         available_on: "Available On"
         cost_price: "Cost Price"
@@ -94,13 +107,6 @@ en-GB:
       product_scope: 
         arguments: "Arguments"
         description: "Description"
-      promotion: 
-        code: "Code"
-        description: "Description"
-        expires_at: "Expires at"
-        name: "Name"
-        starts_at: "Starts at"
-        usage_limit: "Usage limit"
       property: 
         name: Name
         presentation: Presentation
@@ -126,6 +132,8 @@ en-GB:
         name: Name
       user: 
         email: Email
+        password: "Password"
+        password_confirmation: "Password Confirmation"
       variant: 
         cost_price: "Cost Price"
         depth: Depth
@@ -217,6 +225,7 @@ en-GB:
         one: Zone
         other: Zones
   add: Add
+  add_action_of_type: Add action of type
   add_category: "Add Category"
   add_country: "Add Country"
   add_option_type: "Add Option Type"
@@ -235,12 +244,20 @@ en-GB:
   adjustment: Adjustment
   adjustment_total: Adjustment Total
   adjustments: Adjustments
+  admin: 
+    mail_methods: 
+      send_testmail: 'Send Testmail'
+      testmail: 
+        delivery_error: 'Testmail delivery error'
+        delivery_success: 'Testmail sent successfully'
+        error: 'Testmail error: %{e}'
   administration: Administration
+  advertise: Advertise
   all: "All"
   all_departments: All departments
   allow_backorders: "Allow Backorders"
-  allow_ssl_to_be_used_when_in_developement_and_test_modes: Allow SSL to be used when in development and test modes
-  allow_ssl_to_be_used_when_in_production_mode: Allow SSL to be used in production mode
+  allow_ssl_in_development_and_test: Allow SSL to be used when in development and test modes
+  allow_ssl_in_production: Allow SSL to be used in production mode
   allowed_ssl_in_production_mode: "SSL will %{not} be used in production"
   already_registered: Already Registered?
   alt_text: Alternative Text
@@ -357,6 +374,9 @@ en-GB:
   date_range: "Date Range"
   debit: Debit
   default: Default
+  default_meta_description: Default Meta Description
+  default_meta_keywords: Default Meta Keywords
+  default_seo_title: Default Seo Title
   delete: Delete
   delivery: Delivery
   depth: Depth
@@ -395,7 +415,7 @@ en-GB:
   enable_login_via_login_password: "Use standard email/password"
   enable_login_via_openid: "Use OpenID instead"
   enable_mail_delivery: Enable Mail Delivery
-  enter_atleast_five_letters: Enter atleast five letters of customer name
+  enter_at_least_five_letters: Enter at least five letters of customer name
   enter_exactly_as_shown_on_card: Please enter exactly as shown on the card
   enter_password_to_confirm: "(we need your current password to confirm your changes)"
   environment: "Environment"
@@ -408,6 +428,17 @@ en-GB:
     one: "1 error prohibited this record from being saved"
     other: "%{count} errors prohibited this record from being saved"
   event: Event
+  events: 
+    spree: 
+      cart: 
+        add: 'Add to cart'
+      checkout: 
+        coupon_code_added: "Coupon code added"
+      order: 
+        contents_changed: "Order contents changed"
+      page_view: "Static page viewed"
+      user: 
+        signup: 'User signup'
   existing_customer: "Existing Customer"
   expiration: "Expiration"
   expiration_month: "Expiration Month"
@@ -464,6 +495,7 @@ en-GB:
   included_in_other_shipment: Included in another Shipment
   included_in_this_shipment: Included in this Shipment
   instructions_to_reset_password: "Fill out the form below and instructions to reset your password will be emailed to you:"
+  insufficient_stock: "Insufficient stock available, only %{on_hand} remaining"
   integration_settings_warning: "If you are changing the billing integration, you must save first before you can edit the integration settings"
   intercept_email_address: Intercept Email Address
   intercept_email_instructions: "Override email recipient and replace with this address."
@@ -482,6 +514,8 @@ en-GB:
       gt: greater than
       gte: greater than or equal to
   items: "Items"
+  landing_page_rule: 
+    path: Path
   last_14_days: "Last 14 Days"
   last_5_orders: "Last 5 Orders"
   last_7_days: "Last 7 Days"
@@ -520,7 +554,6 @@ en-GB:
   mark_shipped: "Mark Shipped"
   master_price: "Master Price"
   max_items: Max Items
-  may_be_combined_with_other_promotions: May be combined with other promotions
   meta_description: "Meta Description"
   meta_keywords: "Meta Keywords"
   metadata: "Metadata"
@@ -536,6 +569,7 @@ en-GB:
   new_billing_integration: New Billing Integration
   new_category: "New category"
   new_customer: "New Customer"
+  new_group: New Group
   new_image: "New Image"
   new_mail_method: New Mail Method
   new_option_type: "New Option Type"
@@ -610,7 +644,6 @@ en-GB:
   order_processed_but_following_items_are_out_of_stock: "Your order has been processed, but following items are out of stock:"
   order_processed_successfully: "Your order has been processed successfully"
   order_state: # keys correspond to Checkout state names:
-    # keys correspond to Checkout state names: 
     address: address
     adjustments: adjustments
     awaiting_return: awaiting return
@@ -817,10 +850,23 @@ en-GB:
   products: Products
   products_with_zero_inventory_display: "Products with a zero inventory will %{not} be displayed"
   promotion: Promotion
+  promotion_action: Promotion Action
+  promotion_action_types: 
+    create_adjustment: 
+      description: Creates a promotion credit adjustment on the order
+      name: Create adjustment
+    create_line_items: 
+      description: Populates the cart with the specified variants and quantities
+      name: Create line items
+    give_store_credit: 
+      description: Gives the user store credit of the amount specified
+      name: Give store credit
+  promotion_actions: Actions
   promotion_form: 
     match_policies: 
       all: Match any of these rules
       any: Match all of these rules
+  promotion_rule: Promotion Rule
   promotion_rule_types: 
     first_order: 
       description: Must be the customer's first order
@@ -828,12 +874,18 @@ en-GB:
     item_total: 
       description: Order total meets these criteria
       name: Item total
+    landing_page: 
+      description: Customer must have visited the specified page
+      name: Landing Page
     product: 
       description: Order includes specified product(s)
       name: Product(s)
     user: 
       description: Available only to the specified users
       name: User
+    user_logged_in: 
+      description: Available only to logged in users
+      name: User Logged In
   promotions: Promotions
   promotions_description: Manage offers and coupons with promotions
   properties: Properties
@@ -964,7 +1016,10 @@ en-GB:
   spree: 
     date: Date
     time: Time
+  spree_alert_checking: "Check for Spree security and release alerts"
+  spree_alert_not_checking: "Not checking for Spree security and release alerts"
   spree_gateway_error_flash_for_checkout: "There was a problem with your payment information. Please check your information and try again."
+  spree_inventory_error_flash_for_insufficient_quantity: "An item in your cart has become unavailable."
   ssl_will_be_used_in_development_and_test_modes: "SSL will be used in development and test mode if necessary."
   ssl_will_be_used_in_production_mode: "SSL will be used in production mode"
   ssl_will_not_be_used_in_development_and_test_modes: "SSL will not be used in development and test mode if necessary."
@@ -1000,11 +1055,17 @@ en-GB:
   taxon_edit: Edit Taxon
   taxonomies: Taxonomies
   taxonomies_setting_description: "Create and manage taxonomies"
+  taxonomy: Taxonomy
   taxonomy_edit: "Edit taxonomy"
   taxonomy_tree_error: "The requested change has not been accepted and the tree has been returned to its previous state, please try again."
   taxonomy_tree_instruction: "* Right click a child in the tree to access the menu for adding, deleting or sorting a child."
   taxons: Taxons
   test: "Test"
+  test_mailer: 
+    test_email: 
+      greeting: 'Congratulations!'
+      message: 'If you have received this email, then your email settings are correct.'
+      subject: 'Testmail'
   test_mode: Test Mode
   thank_you_for_your_order: "Thank you for your business.  Please print out a copy of this confirmation page for your records."
   there_were_problems_with_the_following_fields: "There were problems with the following fields"
@@ -1054,6 +1115,7 @@ en-GB:
     must_be_int: "must be an integer"
     must_be_non_negative: "must be a non-negative value"
   value: Value
+  variant: Variant
   variants: Variants
   vat: "VAT"
   version: Version
